@@ -1,0 +1,4 @@
+interface:
+  display_name: "Guozhi PPT Director"
+  short_description: "Directs high-quality PPTX and animated web deck workflows."
+  default_prompt: "Use $guozhi-ppt-director to turn my material into a presentation package."
