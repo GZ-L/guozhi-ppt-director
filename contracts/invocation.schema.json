@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "guozhi-ppt-director/invocation.schema.json",
+  "title": "Guozhi PPT Director Invocation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["protocol_version", "request_id", "operation", "interaction_mode"],
+  "properties": {
+    "protocol_version": {"const": "1.0"},
+    "request_id": {"type": "string", "minLength": 1},
+    "run_id": {"type": ["string", "null"]},
+    "operation": {
+      "enum": [
+        "deck.create",
+        "deck.revise",
+        "deck.review",
+        "style.list",
+        "style.add",
+        "style.update",
+        "style.remove",
+        "help"
+      ]
+    },
+    "interaction_mode": {"enum": ["human", "agent"]},
+    "source": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["type", "location"],
+        "properties": {
+          "type": {"enum": ["file", "url", "text", "run", "style"]},
+          "location": {"type": "string", "minLength": 1},
+          "role": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "language": {"type": "string"},
+        "page_count": {"type": "integer", "minimum": 1},
+        "speaking_minutes": {"type": "number", "exclusiveMinimum": 0},
+        "deliverable": {"enum": ["pptx", "html", "pdf", "dual", "review"]},
+        "route_id": {"enum": ["native_pptx", "web_deck", "dual", "dashiai", "review_only"]},
+        "style_id": {"type": ["string", "null"]},
+        "rewrite_boundary": {"enum": ["rebuild", "preserve_order", "preserve_wording"]},
+        "speaker_notes": {"type": "boolean"},
+        "citations": {"type": "boolean"},
+        "allow_limited_style": {"type": "boolean"},
+        "mutation_approved": {"type": "boolean"},
+        "revision_scope": {"type": ["string", "null"]}
+      }
+    },
+    "confirmation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status"],
+      "properties": {
+        "status": {"enum": ["pending", "confirmed", "defaults_authorized"]},
+        "exact_text": {"type": ["string", "null"]}
+      }
+    },
+    "allow_defaults": {"type": "boolean", "default": false},
+    "output_root": {"type": ["string", "null"]}
+  }
+}

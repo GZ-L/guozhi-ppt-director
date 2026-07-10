@@ -1,0 +1,33 @@
+{
+  "protocol_version": "1.0",
+  "request_id": "",
+  "run_id": "",
+  "operation": "deck.create",
+  "interaction_mode": "human",
+  "status": "received",
+  "source": [],
+  "resolved_decisions": {
+    "language": null,
+    "page_count": null,
+    "speaking_minutes": null,
+    "deliverable": null,
+    "route_id": null,
+    "style_id": null,
+    "rewrite_boundary": null,
+    "speaker_notes": null,
+    "citations": null,
+    "allow_limited_style": false,
+    "mutation_approved": false
+  },
+  "unresolved_fields": [],
+  "proposed_decisions": {},
+  "capabilities": [],
+  "artifacts": [],
+  "warnings": [],
+  "error": null,
+  "next_action": null,
+  "confirmation": {
+    "status": "pending",
+    "exact_text": null
+  }
+}

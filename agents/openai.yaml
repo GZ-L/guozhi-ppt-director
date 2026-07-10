@@ -1,4 +1,4 @@
 interface:
   display_name: "Guozhi PPT Director"
-  short_description: "Directs high-quality PPTX and animated web deck workflows."
-  default_prompt: "Use $guozhi-ppt-director to turn my material into a presentation package."
+  short_description: "Directs deterministic presentation workflows for human and Agent callers."
+  default_prompt: "Use $guozhi-ppt-director for this presentation task. Follow CALLING_SPEC.md, recommend one complete configuration, and stop with needs_input when a material decision is unresolved."

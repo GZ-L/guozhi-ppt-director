@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+
+# Third-party visual references stay local. Publish only manifests and source links.
+assets/style-library/**/*.png
+assets/style-library/**/*.jpg
+assets/style-library/**/*.jpeg
+assets/style-library/**/*.webp
+assets/style-library/**/*.gif

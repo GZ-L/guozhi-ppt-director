@@ -1,0 +1,68 @@
+{
+  "pack_id": "ref-19-red-glass-dark-pitch",
+  "status": "ok",
+  "created_at": "2026-07-09T05:22:57.039347+00:00",
+  "source": "/Users/guozhi/Desktop/AI技术项目/小红书内容/小红书视频/AI做ppt/www-behance-net-gallery-236313611-presentation-pitch-deck-prezentacija.pdf",
+  "source_type": "pdf",
+  "usage_policy": "Reference visual style only. Do not copy source content, text, logos, brands, subjects, or page-specific claims.",
+  "coverage": [
+    "cover",
+    "section",
+    "body",
+    "process",
+    "data",
+    "closing"
+  ],
+  "assets": [
+    {
+      "role": "cover",
+      "selector": "1",
+      "asset_path": "assets/style-library/style-packs/ref-19-red-glass-dark-pitch/cover-01.png",
+      "content_type": "image/png",
+      "bytes": 1988102,
+      "sha256": "a482192a19307ccd1c7139b5d1687023ac0694ca519c07f979931b7298e49024"
+    },
+    {
+      "role": "section",
+      "selector": "4",
+      "asset_path": "assets/style-library/style-packs/ref-19-red-glass-dark-pitch/section-01.png",
+      "content_type": "image/png",
+      "bytes": 1211330,
+      "sha256": "68e8776d2ddac78699cf453841fa108bcb0eff81cf8da9500ecbb71985096fde"
+    },
+    {
+      "role": "body",
+      "selector": "2",
+      "asset_path": "assets/style-library/style-packs/ref-19-red-glass-dark-pitch/body-01.png",
+      "content_type": "image/png",
+      "bytes": 1812025,
+      "sha256": "a34ea42b570d0f043a50e8241967ea49699e586e5385b54beeeac352ebe15a96"
+    },
+    {
+      "role": "process",
+      "selector": "3",
+      "asset_path": "assets/style-library/style-packs/ref-19-red-glass-dark-pitch/process-01.png",
+      "content_type": "image/png",
+      "bytes": 1907270,
+      "sha256": "49642b524b60b5b10370602b84a66a4105d16e781f125a49813b8a3482374680"
+    },
+    {
+      "role": "data",
+      "selector": "5",
+      "asset_path": "assets/style-library/style-packs/ref-19-red-glass-dark-pitch/data-01.png",
+      "content_type": "image/png",
+      "bytes": 1721132,
+      "sha256": "7f58cad7522d7d15bdf425d921dc2bba953a97cdec5b49508ad396130653a8b7"
+    },
+    {
+      "role": "closing",
+      "selector": "6",
+      "asset_path": "assets/style-library/style-packs/ref-19-red-glass-dark-pitch/closing-01.png",
+      "content_type": "image/png",
+      "bytes": 1097763,
+      "sha256": "920d982af3b5b273e25eb9772beb0baacbdede747fb24f5606b9b76244d102ba"
+    }
+  ],
+  "contact_sheet": "assets/style-library/style-packs/ref-19-red-glass-dark-pitch/contact-sheet.png",
+  "notes": "Local PDF reference for red glass dark pitch visual system. Do not copy Russian text, logos, QR codes, or glass object shape."
+}

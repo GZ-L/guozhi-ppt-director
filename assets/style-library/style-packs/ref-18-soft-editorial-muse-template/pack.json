@@ -1,0 +1,59 @@
+{
+  "pack_id": "ref-18-soft-editorial-muse-template",
+  "status": "ok",
+  "created_at": "2026-07-09T05:22:49.196977+00:00",
+  "source": "/Users/guozhi/Desktop/AI技术项目/小红书内容/小红书视频/AI做ppt/www-behance-net-gallery-134851785-muse-presentation-template-tracking_source-search_projects-ppt-l-43.pdf",
+  "source_type": "pdf",
+  "usage_policy": "Reference visual style only. Do not copy source content, text, logos, brands, subjects, or page-specific claims.",
+  "coverage": [
+    "cover",
+    "section",
+    "body",
+    "data",
+    "closing"
+  ],
+  "assets": [
+    {
+      "role": "cover",
+      "selector": "1",
+      "asset_path": "assets/style-library/style-packs/ref-18-soft-editorial-muse-template/cover-01.png",
+      "content_type": "image/png",
+      "bytes": 577332,
+      "sha256": "df62209bfa99603e17403d38e618ca5b42fd81a97f00f7ceb37c03722868dca1"
+    },
+    {
+      "role": "section",
+      "selector": "2",
+      "asset_path": "assets/style-library/style-packs/ref-18-soft-editorial-muse-template/section-01.png",
+      "content_type": "image/png",
+      "bytes": 613591,
+      "sha256": "87361eebc83e4e245e5d9c5ce6af201fc67e1bc98d72dd485def167a926fd476"
+    },
+    {
+      "role": "body",
+      "selector": "3",
+      "asset_path": "assets/style-library/style-packs/ref-18-soft-editorial-muse-template/body-01.png",
+      "content_type": "image/png",
+      "bytes": 622756,
+      "sha256": "78dafcdd9d3568e3fe606a52881d0303167f8f5bc110d24a11a88a3a1fcb79fa"
+    },
+    {
+      "role": "data",
+      "selector": "4",
+      "asset_path": "assets/style-library/style-packs/ref-18-soft-editorial-muse-template/data-01.png",
+      "content_type": "image/png",
+      "bytes": 675849,
+      "sha256": "42bad00b03bb32d3fa995494176142eeb7b708d3dd06f2f0bc41db65a5c1816c"
+    },
+    {
+      "role": "closing",
+      "selector": "5",
+      "asset_path": "assets/style-library/style-packs/ref-18-soft-editorial-muse-template/closing-01.png",
+      "content_type": "image/png",
+      "bytes": 220106,
+      "sha256": "6bb9729d08e5703573a4dbc554a5f9be59fb63338423e6459d5f8eb189111710"
+    }
+  ],
+  "contact_sheet": "assets/style-library/style-packs/ref-18-soft-editorial-muse-template/contact-sheet.png",
+  "notes": "Local PDF pages are Behance/template overview contact sheets. Use as palette/layout evidence, not as exact page composition."
+}

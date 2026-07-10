@@ -1,0 +1,84 @@
+{
+  "pack_id": "ref-07-black-red-hardware-cgi-limited",
+  "status": "limited",
+  "created_at": "2026-07-09T06:32:31.910190+00:00",
+  "source": "https://www.zcool.com.cn/work/ZNzI3NDM0OTI=.html",
+  "source_type": "zcool-work-page",
+  "usage_policy": "Reference visual style only. Do not copy source content, text, logos, brands, subjects, or page-specific claims.",
+  "coverage": [
+    "cover",
+    "section",
+    "body",
+    "process",
+    "compare",
+    "data",
+    "closing"
+  ],
+  "assets": [
+    {
+      "role": "cover",
+      "selector": "1",
+      "source_product_image_index": "1",
+      "asset_path": "assets/style-library/style-packs/ref-07-black-red-hardware-cgi-limited/cover-01.png",
+      "content_type": "image/png",
+      "bytes": 496127,
+      "sha256": "08fe14f6099ad49caff2eea049618207081b0aee8c07bb55ac250a603756372e"
+    },
+    {
+      "role": "section",
+      "selector": "5",
+      "source_product_image_index": "5",
+      "asset_path": "assets/style-library/style-packs/ref-07-black-red-hardware-cgi-limited/section-01.png",
+      "content_type": "image/png",
+      "bytes": 1412628,
+      "sha256": "a1571ca80d8bbabae2e72e0b4cb64ccede3620bafc1783b41f5e3b3e7834a02a"
+    },
+    {
+      "role": "body",
+      "selector": "2",
+      "source_product_image_index": "2",
+      "asset_path": "assets/style-library/style-packs/ref-07-black-red-hardware-cgi-limited/body-01.png",
+      "content_type": "image/png",
+      "bytes": 1184182,
+      "sha256": "4ffe2d6d885f145c52ff3e125ec80dbbb573d5c4f72947e4fde60323dd2c1892"
+    },
+    {
+      "role": "process",
+      "selector": "6",
+      "source_product_image_index": "6",
+      "asset_path": "assets/style-library/style-packs/ref-07-black-red-hardware-cgi-limited/process-01.png",
+      "content_type": "image/png",
+      "bytes": 1235745,
+      "sha256": "4526d8784ef3861687fe938d301f784ba94adda8daa3458027e8a983c0ea287d"
+    },
+    {
+      "role": "compare",
+      "selector": "10",
+      "source_product_image_index": "10",
+      "asset_path": "assets/style-library/style-packs/ref-07-black-red-hardware-cgi-limited/compare-01.png",
+      "content_type": "image/png",
+      "bytes": 1619017,
+      "sha256": "f4399a7dc3db61bdfe9318fb53b5107d28acc35c1ca21faf38d97f488c470f11"
+    },
+    {
+      "role": "data",
+      "selector": "11",
+      "source_product_image_index": "11",
+      "asset_path": "assets/style-library/style-packs/ref-07-black-red-hardware-cgi-limited/data-01.png",
+      "content_type": "image/png",
+      "bytes": 1521473,
+      "sha256": "c77eceb69b07511e7287e2563c938b4830304ff467213fffac35b7387c6770dd"
+    },
+    {
+      "role": "closing",
+      "selector": "12",
+      "source_product_image_index": "12",
+      "asset_path": "assets/style-library/style-packs/ref-07-black-red-hardware-cgi-limited/closing-01.png",
+      "content_type": "image/png",
+      "bytes": 1245661,
+      "sha256": "68491a766f63c524a2d9131d3e5661bd90a037e89d506df3cab44b10108eca65"
+    }
+  ],
+  "contact_sheet": "assets/style-library/style-packs/ref-07-black-red-hardware-cgi-limited/contact-sheet.png",
+  "notes": "ZCOOL multi-image productImages pack for black-red device KV and hardware CGI assets. Good for product hero, chip/camera technology visuals, and dark hardware launch mood, but limited as full PPT continuity evidence. Do not copy device design, brand marks, exact render, Chinese copy, or product-specific layout."
+}

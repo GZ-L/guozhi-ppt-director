@@ -1,0 +1,50 @@
+{
+  "pack_id": "ref-20-black-blue-saas-proposal",
+  "status": "ok",
+  "created_at": "2026-07-09T05:22:50.693014+00:00",
+  "source": "/Users/guozhi/Desktop/AI技术项目/小红书内容/小红书视频/AI做ppt/www-behance-net-gallery-249352711-presentation-design-for-a-business-proposal-tracking_source-search_projects-ppt-l-5.pdf",
+  "source_type": "pdf",
+  "usage_policy": "Reference visual style only. Do not copy source content, text, logos, brands, subjects, or page-specific claims.",
+  "coverage": [
+    "cover",
+    "body",
+    "data",
+    "closing"
+  ],
+  "assets": [
+    {
+      "role": "cover",
+      "selector": "3",
+      "asset_path": "assets/style-library/style-packs/ref-20-black-blue-saas-proposal/cover-01.png",
+      "content_type": "image/png",
+      "bytes": 849316,
+      "sha256": "e05981682171474e07188aa7ef4dd84014cdff4238d1723eca6f7efc908222ae"
+    },
+    {
+      "role": "body",
+      "selector": "4",
+      "asset_path": "assets/style-library/style-packs/ref-20-black-blue-saas-proposal/body-01.png",
+      "content_type": "image/png",
+      "bytes": 1261182,
+      "sha256": "3553c941f09ba1b27d7b9c27e4aad38d3554e600e44e106f5c4545d0ebda40a3"
+    },
+    {
+      "role": "data",
+      "selector": "5",
+      "asset_path": "assets/style-library/style-packs/ref-20-black-blue-saas-proposal/data-01.png",
+      "content_type": "image/png",
+      "bytes": 1420862,
+      "sha256": "b9661b9ead0885cc806e7b309092d73af5749ff01d829aa05e8210e8e4edca9d"
+    },
+    {
+      "role": "closing",
+      "selector": "6",
+      "asset_path": "assets/style-library/style-packs/ref-20-black-blue-saas-proposal/closing-01.png",
+      "content_type": "image/png",
+      "bytes": 235335,
+      "sha256": "670bb29a26f53918d17c0540e60cb9dbe074c44b9b19537204169a14b29da755"
+    }
+  ],
+  "contact_sheet": "assets/style-library/style-packs/ref-20-black-blue-saas-proposal/contact-sheet.png",
+  "notes": "Local PDF reference for black-blue SaaS proposal. Pages 1-2 are loading/weak evidence and are intentionally skipped."
+}

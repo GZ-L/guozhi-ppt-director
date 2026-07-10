@@ -1,69 +1,35 @@
 # Output Routes
 
-Use this file before choosing a production path.
+Route identifiers are defined by `contracts/route-registry.json`. This file explains their use and cannot rename them.
 
-## Route A: Editable PPTX
+## `native_pptx`
 
-Choose this route when the user needs:
+Use for editable PowerPoint delivery. The renderer must support editable text and shapes, preserve notes when requested, export a `.pptx`, and provide a render or open-file QA path.
 
-- School assignment, company report, client proposal, pitch deck, class presentation, or team collaboration.
-- A `.pptx` file with editable text, shapes, charts, and layout.
-- Compatibility with PowerPoint, Keynote import, WPS, or Feishu import.
+If no native renderer is available, return `blocked`; do not silently change routes.
 
-Recommended adapter:
+## `web_deck`
 
-- PPT Master or another true PPTX generator.
+Use only when HTML presentation, motion, responsive scenes, screen recording, or interactive demonstration is explicitly required. Deliver the HTML project or preview path and run viewport/overlap checks.
 
-Required handoff package:
+## `dual`
 
-- `deck-brief.md`
-- `outline.md`
-- `style-board.md`
-- source links or evidence notes
+Use only after explicit confirmation that both editable PPTX and web output are required. Produce both from one confirmed story, terminology set, style lock, and page-job map. QA each artifact separately.
 
-Delivery should include:
+## `dashiai`
 
-- `.pptx`
-- optional `.pdf`
-- `qa-report.md`
+Use only when DashiAI/template-engine output is explicitly requested or confirmed. Read `references/dashiai-adapter.md`, run `scripts/check_dashiai_adapter.py`, confirm theme and media intent, then render from the completed director package.
 
-## Route B: Frontend Slides
+DashiAI remains an external renderer and template dependency. It does not own story, page count, style routing, or QA.
 
-Choose this route when the user needs:
+## `review_only`
 
-- Web slides, animated presentation, product-launch style, keynote feeling, motion graphics, screen recording, short-video repurposing, or interactive demo.
-- HTML/CSS/JS control over transitions, layout, and responsive scenes.
+Use for `deck.review`. Return evidence-based findings, suggested fixes, and optional revised planning material. Do not generate presentation artifacts unless a later invocation uses `deck.create` or `deck.revise`.
 
-Recommended adapter:
+## Selection Rules
 
-- Frontend Slides or another HTML slide generator.
-
-Required handoff package:
-
-- `deck-brief.md`
-- `outline.md`
-- `style-board.md`
-- motion notes per page
-
-Delivery should include:
-
-- `index.html` or project folder
-- preview URL or local run command
-- optional exported images/video
-- `qa-report.md`
-
-## Route C: Dual Version
-
-Choose this route when the user needs both:
-
-- A formal editable PPTX for submission.
-- A high-aesthetic animated version for video, social media, or live presentation.
-
-Recommended sequence:
-
-1. Build `deck-brief.md`, `outline.md`, and `style-board.md`.
-2. Produce a visual/motion direction with Frontend Slides.
-3. Convert or recreate the stable pages into editable PPTX with PPT Master.
-4. QA both versions separately.
-
-Use dual version as the default when the user says "both", "PPT + video", "can submit and can post", "advanced version", or "make it cool and editable".
+- Explicit structured `route_id` wins.
+- Explicit user confirmation wins over a recommendation.
+- Default to `native_pptx` only when defaults are authorized and PPTX is compatible with the requested deliverable.
+- A request for beauty alone does not authorize a renderer change.
+- Never infer a route from an unqualified letter or an option label from an earlier, unrelated turn.
