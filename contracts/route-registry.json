@@ -1,0 +1,40 @@
+{
+  "protocol_version": "1.0",
+  "routes": [
+    {
+      "id": "native_pptx",
+      "kind": "renderer",
+      "deliverables": ["pptx"],
+      "requires_confirmation": true,
+      "capability_check": "native editable PPTX renderer available"
+    },
+    {
+      "id": "web_deck",
+      "kind": "renderer",
+      "deliverables": ["html"],
+      "requires_confirmation": true,
+      "capability_check": "web deck renderer and preview available"
+    },
+    {
+      "id": "dual",
+      "kind": "composite",
+      "deliverables": ["pptx", "html"],
+      "requires_confirmation": true,
+      "capability_check": "native PPTX and web deck renderers available"
+    },
+    {
+      "id": "dashiai",
+      "kind": "external_renderer",
+      "deliverables": ["html", "pptx", "pdf"],
+      "requires_confirmation": true,
+      "capability_check": "scripts/check_dashiai_adapter.py"
+    },
+    {
+      "id": "review_only",
+      "kind": "non_rendering",
+      "deliverables": ["review"],
+      "requires_confirmation": false,
+      "capability_check": "none"
+    }
+  ]
+}

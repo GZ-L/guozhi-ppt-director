@@ -1,0 +1,69 @@
+{
+  "pack_id": "ref-23-black-orange-auto-marketing-strategy",
+  "status": "ok",
+  "created_at": "2026-07-09T14:57:37.781838+00:00",
+  "source": "/Users/guozhi/Downloads/www-001ppt-com-ai-read-2056612897789104130.pdf",
+  "source_type": "pdf-embedded-slide-images",
+  "usage_policy": "Reference visual style only. Do not copy source content, text, logos, brands, subjects, or page-specific claims.",
+  "coverage": [
+    "cover",
+    "section",
+    "body",
+    "process",
+    "compare",
+    "data"
+  ],
+  "assets": [
+    {
+      "role": "cover",
+      "selector": "X85.jpg",
+      "asset_path": "assets/style-library/style-packs/ref-23-black-orange-auto-marketing-strategy/cover-01.png",
+      "content_type": "image/png",
+      "bytes": 214391,
+      "sha256": "2a0bc96140a3bc1606073dd49c28219288e761d8b7ab80d7376d973eed50b96c"
+    },
+    {
+      "role": "section",
+      "selector": "X87.jpg",
+      "asset_path": "assets/style-library/style-packs/ref-23-black-orange-auto-marketing-strategy/section-01.png",
+      "content_type": "image/png",
+      "bytes": 176482,
+      "sha256": "da5d6e0fbb33392f83186a6eb15fa0a63cb566c6eaa6e63d35ddafcb0a5af52d"
+    },
+    {
+      "role": "body",
+      "selector": "X96.jpg",
+      "asset_path": "assets/style-library/style-packs/ref-23-black-orange-auto-marketing-strategy/body-01.png",
+      "content_type": "image/png",
+      "bytes": 234665,
+      "sha256": "aa6ede11d41af14bf40e4e6ba69e6fb6112503583288d8106f62f01f81a59fe0"
+    },
+    {
+      "role": "process",
+      "selector": "X91.jpg",
+      "asset_path": "assets/style-library/style-packs/ref-23-black-orange-auto-marketing-strategy/process-01.png",
+      "content_type": "image/png",
+      "bytes": 336072,
+      "sha256": "7bfd4ff4880565607d6b1faf870a2ff219b03292d64680c1c969b515aa3b009a"
+    },
+    {
+      "role": "compare",
+      "selector": "X94.jpg",
+      "asset_path": "assets/style-library/style-packs/ref-23-black-orange-auto-marketing-strategy/compare-01.png",
+      "content_type": "image/png",
+      "bytes": 163911,
+      "sha256": "59b93f54a3d6d979635b5fb8be724419854af41c3ad3664aa9780b24827d057e"
+    },
+    {
+      "role": "data",
+      "selector": "X88.jpg",
+      "asset_path": "assets/style-library/style-packs/ref-23-black-orange-auto-marketing-strategy/data-01.png",
+      "content_type": "image/png",
+      "bytes": 133733,
+      "sha256": "a86a08be0b425e1e5b6b415f098489ac8fb941e9a00b0449088f3cf499be3aa9"
+    }
+  ],
+  "contact_sheet": "assets/style-library/style-packs/ref-23-black-orange-auto-marketing-strategy/contact-sheet.png",
+  "notes": "Local PDF reference from /Users/guozhi/Downloads/www-001ppt-com-ai-read-2056612897789104130.pdf. Clean embedded slide images were extracted from a webpage-converted PDF; pages 4-6 in the PDF are mostly loading placeholders and are intentionally excluded. Use visual style only: black/charcoal automotive-marketing deck, orange accent system, card-based data blocks, cinematic product cover, and compact dark report layouts. Do not copy Xiaomi/YU7 branding, vehicle imagery, source text, charts, metrics, icons, page order, or marketing claims.",
+  "source_extraction": "pypdf extracted clean embedded 800x450 slide images from the webpage-converted PDF; loading placeholder PDF pages were excluded."
+}

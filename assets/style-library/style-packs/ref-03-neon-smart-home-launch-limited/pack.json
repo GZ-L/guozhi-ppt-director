@@ -1,0 +1,24 @@
+{
+  "pack_id": "ref-03-neon-smart-home-launch-limited",
+  "status": "limited",
+  "created_at": "2026-07-09T06:31:00.055066+00:00",
+  "source": "https://www.zcool.com.cn/work/ZNjgxMTI2MTI=.html",
+  "source_type": "zcool-work-page",
+  "usage_policy": "Reference visual style only. Do not copy source content, text, logos, brands, subjects, or page-specific claims.",
+  "coverage": [
+    "cover"
+  ],
+  "assets": [
+    {
+      "role": "cover",
+      "selector": "1",
+      "source_product_image_index": "1",
+      "asset_path": "assets/style-library/style-packs/ref-03-neon-smart-home-launch-limited/cover-01.png",
+      "content_type": "image/png",
+      "bytes": 1345752,
+      "sha256": "13ea5c2b0495ae0740ab3db4e2ab0e86b830109767c9a5c75fc7e42a638865ae"
+    }
+  ],
+  "contact_sheet": "assets/style-library/style-packs/ref-03-neon-smart-home-launch-limited/contact-sheet.png",
+  "notes": "ZCOOL productImages has only one usable static image; other available source imagery is not suitable as multi-page static style evidence. Keep as cover-only/limited neon smart-home launch reference. Do not use as default primary reference for a full deck unless the user explicitly accepts limited cover evidence."
+}

@@ -1,0 +1,756 @@
+{
+  "created_at": "2026-07-09T00:00:00Z",
+  "schema": "guozhi-ppt-director-style-pack-index-v1",
+  "usage_policy": "Reference visual style only. Do not copy source content, text, logos, brands, subjects, or page-specific claims.",
+  "packs": [
+    {
+      "pack_id": "ref-01-premium-blue-tech-keynote",
+      "status": "ok",
+      "created_at": "2026-07-09T06:30:01.554408+00:00",
+      "source": "https://www.zcool.com.cn/work/ZNjg0Nzg1Mjg=.html",
+      "source_type": "zcool-work-page",
+      "usage_policy": "Reference visual style only. Do not copy source content, text, logos, brands, subjects, or page-specific claims.",
+      "coverage": [
+        "cover",
+        "section",
+        "body",
+        "process",
+        "compare",
+        "data"
+      ],
+      "assets": [
+        {
+          "role": "cover",
+          "selector": "1",
+          "source_product_image_index": "1",
+          "asset_path": "assets/style-library/style-packs/ref-01-premium-blue-tech-keynote/cover-01.png",
+          "content_type": "image/png",
+          "bytes": 835835,
+          "sha256": "f69e4812c41c967cf1bdf10de4f0040e4bbc9229730820de448dc53459c112c2"
+        },
+        {
+          "role": "section",
+          "selector": "3",
+          "source_product_image_index": "3",
+          "asset_path": "assets/style-library/style-packs/ref-01-premium-blue-tech-keynote/section-01.png",
+          "content_type": "image/png",
+          "bytes": 43106,
+          "sha256": "a4eec9268dbbfdd2194932272fbde031f75c8321b4583357b14dd3483f160d4a"
+        },
+        {
+          "role": "body",
+          "selector": "2",
+          "source_product_image_index": "2",
+          "asset_path": "assets/style-library/style-packs/ref-01-premium-blue-tech-keynote/body-01.png",
+          "content_type": "image/png",
+          "bytes": 848507,
+          "sha256": "7b433b36661e4fea41cae0374b17e43cf0e5c134ac104dde3d3864e40e6c2642"
+        },
+        {
+          "role": "process",
+          "selector": "6",
+          "source_product_image_index": "6",
+          "asset_path": "assets/style-library/style-packs/ref-01-premium-blue-tech-keynote/process-01.png",
+          "content_type": "image/png",
+          "bytes": 1941008,
+          "sha256": "afb8e089dfe99fe81393db9d0ef85d657b5556331920b07ba9158999b42c56d5"
+        },
+        {
+          "role": "compare",
+          "selector": "7",
+          "source_product_image_index": "7",
+          "asset_path": "assets/style-library/style-packs/ref-01-premium-blue-tech-keynote/compare-01.png",
+          "content_type": "image/png",
+          "bytes": 2205945,
+          "sha256": "33bcb363abf7b3080dd0c1d8e61b0a61cf932e49d84f8a89d8c226540b23d260"
+        },
+        {
+          "role": "data",
+          "selector": "9",
+          "source_product_image_index": "9",
+          "asset_path": "assets/style-library/style-packs/ref-01-premium-blue-tech-keynote/data-01.png",
+          "content_type": "image/png",
+          "bytes": 2576051,
+          "sha256": "188ad1ac068f5a3e733e5730e7d641ffd58912597be7698aacba1bf061b16e11"
+        }
+      ],
+      "contact_sheet": "assets/style-library/style-packs/ref-01-premium-blue-tech-keynote/contact-sheet.png",
+      "notes": "ZCOOL multi-image productImages pack. Strong blue-black premium technology keynote evidence across cover, divider, concept, progression, product comparison, and dense product matrix. Use visual traits only; do not copy product, brand, Chinese copy, flower imagery, or exact compositions."
+    },
+    {
+      "pack_id": "ref-02-cinematic-automotive-report",
+      "status": "ok",
+      "created_at": "2026-07-09T06:30:43.547020+00:00",
+      "source": "https://www.zcool.com.cn/work/ZNzMyNzU2ODA=.html",
+      "source_type": "zcool-work-page",
+      "usage_policy": "Reference visual style only. Do not copy source content, text, logos, brands, subjects, or page-specific claims.",
+      "coverage": [
+        "cover",
+        "section",
+        "body",
+        "process",
+        "compare",
+        "data",
+        "closing"
+      ],
+      "assets": [
+        {
+          "role": "cover",
+          "selector": "1",
+          "source_product_image_index": "1",
+          "asset_path": "assets/style-library/style-packs/ref-02-cinematic-automotive-report/cover-01.png",
+          "content_type": "image/png",
+          "bytes": 1826439,
+          "sha256": "b8cdfbc7b8fb14e519be69647b41046ad78ccdde61541eb56dfe0b5f3c4da0c6"
+        },
+        {
+          "role": "section",
+          "selector": "2",
+          "source_product_image_index": "2",
+          "asset_path": "assets/style-library/style-packs/ref-02-cinematic-automotive-report/section-01.png",
+          "content_type": "image/png",
+          "bytes": 1653955,
+          "sha256": "94a8487fbd437fea8ef92d1cfb292ab8fba4a2b179627a8f2b2ec81b234c7a5c"
+        },
+        {
+          "role": "body",
+          "selector": "4",
+          "source_product_image_index": "4",
+          "asset_path": "assets/style-library/style-packs/ref-02-cinematic-automotive-report/body-01.png",
+          "content_type": "image/png",
+          "bytes": 632192,
+          "sha256": "9377c5e6d066b470e3a432fa1423afa2f3427e45084c98c474bf085a2feb0d90"
+        },
+        {
+          "role": "process",
+          "selector": "6",
+          "source_product_image_index": "6",
+          "asset_path": "assets/style-library/style-packs/ref-02-cinematic-automotive-report/process-01.png",
+          "content_type": "image/png",
+          "bytes": 1755593,
+          "sha256": "21b5161aaafcfadc2b8565a51b519f794b155438257af354853853bfba2c8e8c"
+        },
+        {
+          "role": "compare",
+          "selector": "5",
+          "source_product_image_index": "5",
+          "asset_path": "assets/style-library/style-packs/ref-02-cinematic-automotive-report/compare-01.png",
+          "content_type": "image/png",
+          "bytes": 1418108,
+          "sha256": "a5d7b7384dda9c021f7b5278712317899e2b33884bdffd831b38906297731463"
+        },
+        {
+          "role": "data",
+          "selector": "3",
+          "source_product_image_index": "3",
+          "asset_path": "assets/style-library/style-packs/ref-02-cinematic-automotive-report/data-01.png",
+          "content_type": "image/png",
+          "bytes": 1134688,
+          "sha256": "8028462f38ed3e47d19e6ad6aa53f77b2f4938743b4b0c675a5c1d3276d2354b"
+        },
+        {
+          "role": "closing",
+          "selector": "7",
+          "source_product_image_index": "7",
+          "asset_path": "assets/style-library/style-packs/ref-02-cinematic-automotive-report/closing-01.png",
+          "content_type": "image/png",
+          "bytes": 1501282,
+          "sha256": "a4656d5dd49bb118a9b7c5c96d3b47f610261d9b38974c33fff70e8eafe907e5"
+        }
+      ],
+      "contact_sheet": "assets/style-library/style-packs/ref-02-cinematic-automotive-report/contact-sheet.png",
+      "notes": "ZCOOL multi-image productImages pack. White editorial automotive report/pitch layout evidence across overview, section, body, contrast, facts/data, and closing/product list. Use visual traits only; do not copy car model, brand marks, page text, metrics, or exact slide compositions."
+    },
+    {
+      "pack_id": "ref-03-neon-smart-home-launch-limited",
+      "status": "limited",
+      "created_at": "2026-07-09T06:31:00.055066+00:00",
+      "source": "https://www.zcool.com.cn/work/ZNjgxMTI2MTI=.html",
+      "source_type": "zcool-work-page",
+      "usage_policy": "Reference visual style only. Do not copy source content, text, logos, brands, subjects, or page-specific claims.",
+      "coverage": [
+        "cover"
+      ],
+      "assets": [
+        {
+          "role": "cover",
+          "selector": "1",
+          "source_product_image_index": "1",
+          "asset_path": "assets/style-library/style-packs/ref-03-neon-smart-home-launch-limited/cover-01.png",
+          "content_type": "image/png",
+          "bytes": 1345752,
+          "sha256": "13ea5c2b0495ae0740ab3db4e2ab0e86b830109767c9a5c75fc7e42a638865ae"
+        }
+      ],
+      "contact_sheet": "assets/style-library/style-packs/ref-03-neon-smart-home-launch-limited/contact-sheet.png",
+      "notes": "ZCOOL productImages has only one usable static image; other available source imagery is not suitable as multi-page static style evidence. Keep as cover-only/limited neon smart-home launch reference. Do not use as default primary reference for a full deck unless the user explicitly accepts limited cover evidence."
+    },
+    {
+      "pack_id": "ref-04-dark-sci-fi-ring-tutorial",
+      "status": "ok",
+      "created_at": "2026-07-09T06:31:28.220810+00:00",
+      "source": "https://www.zcool.com.cn/work/ZNjUxNzEyODQ=.html",
+      "source_type": "zcool-work-page",
+      "usage_policy": "Reference visual style only. Do not copy source content, text, logos, brands, subjects, or page-specific claims.",
+      "coverage": [
+        "cover",
+        "section",
+        "body",
+        "process",
+        "compare",
+        "data",
+        "quote"
+      ],
+      "assets": [
+        {
+          "role": "cover",
+          "selector": "2",
+          "source_product_image_index": "2",
+          "asset_path": "assets/style-library/style-packs/ref-04-dark-sci-fi-ring-tutorial/cover-01.png",
+          "content_type": "image/png",
+          "bytes": 1809998,
+          "sha256": "19b9c8bedf0eeb0913b8132deb0cec3e0a0b797b903036159db5d514f792b9b4"
+        },
+        {
+          "role": "section",
+          "selector": "3",
+          "source_product_image_index": "3",
+          "asset_path": "assets/style-library/style-packs/ref-04-dark-sci-fi-ring-tutorial/section-01.png",
+          "content_type": "image/png",
+          "bytes": 324269,
+          "sha256": "a4396160a79b6b8946b27ac5b70558dfd0f961c189d3031d8cc391f91a8de237"
+        },
+        {
+          "role": "body",
+          "selector": "4",
+          "source_product_image_index": "4",
+          "asset_path": "assets/style-library/style-packs/ref-04-dark-sci-fi-ring-tutorial/body-01.png",
+          "content_type": "image/png",
+          "bytes": 750760,
+          "sha256": "ab08921ff9265a69a5ac888a4dac5d2a4902a843669078696c6fe815f7d94e01"
+        },
+        {
+          "role": "process",
+          "selector": "5",
+          "source_product_image_index": "5",
+          "asset_path": "assets/style-library/style-packs/ref-04-dark-sci-fi-ring-tutorial/process-01.png",
+          "content_type": "image/png",
+          "bytes": 681410,
+          "sha256": "e27760a3062549c99042eb5e9efc8c8a3124dbe2b8bb99871b804fcfaf4c5977"
+        },
+        {
+          "role": "compare",
+          "selector": "6",
+          "source_product_image_index": "6",
+          "asset_path": "assets/style-library/style-packs/ref-04-dark-sci-fi-ring-tutorial/compare-01.png",
+          "content_type": "image/png",
+          "bytes": 716014,
+          "sha256": "200cad6ac9d572f7f5c816b703a5a5e8da26e5a8779252092be317f4743847dc"
+        },
+        {
+          "role": "data",
+          "selector": "9",
+          "source_product_image_index": "9",
+          "asset_path": "assets/style-library/style-packs/ref-04-dark-sci-fi-ring-tutorial/data-01.png",
+          "content_type": "image/png",
+          "bytes": 694086,
+          "sha256": "c8a51d4d345e956383bb703adc93e13d244b6908e31f242396aa9469afbc7864"
+        },
+        {
+          "role": "quote",
+          "selector": "8",
+          "source_product_image_index": "8",
+          "asset_path": "assets/style-library/style-packs/ref-04-dark-sci-fi-ring-tutorial/quote-01.png",
+          "content_type": "image/png",
+          "bytes": 686922,
+          "sha256": "9311843397a1d05e1412cda727cbc3793f2809e281c7735e56fa704cbc536fb5"
+        }
+      ],
+      "contact_sheet": "assets/style-library/style-packs/ref-04-dark-sci-fi-ring-tutorial/contact-sheet.png",
+      "notes": "ZCOOL multi-image productImages pack. Dark sci-fi ring and light-effect tutorial evidence across hero, alternate divider, explanation/process pages, and parameter-like software panels. Use for dark future-tech/methodology decks cautiously; do not copy tutorial screenshots, Chinese copy, source labels, or exact ring composition."
+    },
+    {
+      "pack_id": "ref-05-blue-black-auto-keynote",
+      "status": "ok",
+      "created_at": "2026-07-09T06:32:03.452089+00:00",
+      "source": "https://www.zcool.com.cn/work/ZNjkwMzExMjQ=.html",
+      "source_type": "zcool-work-page",
+      "usage_policy": "Reference visual style only. Do not copy source content, text, logos, brands, subjects, or page-specific claims.",
+      "coverage": [
+        "cover",
+        "section",
+        "body",
+        "process",
+        "data",
+        "quote",
+        "closing"
+      ],
+      "assets": [
+        {
+          "role": "cover",
+          "selector": "1",
+          "source_product_image_index": "1",
+          "asset_path": "assets/style-library/style-packs/ref-05-blue-black-auto-keynote/cover-01.png",
+          "content_type": "image/png",
+          "bytes": 881428,
+          "sha256": "16788993988e4b4d3bee525b7aa7f9fc35637b1df6488b17124ed117c302cb61"
+        },
+        {
+          "role": "section",
+          "selector": "6",
+          "source_product_image_index": "6",
+          "asset_path": "assets/style-library/style-packs/ref-05-blue-black-auto-keynote/section-01.png",
+          "content_type": "image/png",
+          "bytes": 25351,
+          "sha256": "1790cae95fbcdb249e5adefb6edb4617527ba03472746a937b328bebbd0f87fb"
+        },
+        {
+          "role": "body",
+          "selector": "2",
+          "source_product_image_index": "2",
+          "asset_path": "assets/style-library/style-packs/ref-05-blue-black-auto-keynote/body-01.png",
+          "content_type": "image/png",
+          "bytes": 597973,
+          "sha256": "2deae64a31809908fab3250f396d3aad432c66b6deb55e88c1f8a70260b7fc62"
+        },
+        {
+          "role": "process",
+          "selector": "3",
+          "source_product_image_index": "3",
+          "asset_path": "assets/style-library/style-packs/ref-05-blue-black-auto-keynote/process-01.png",
+          "content_type": "image/png",
+          "bytes": 1610495,
+          "sha256": "9a3135dbae66aa3cd46226c749ae768918583136d93c2b481243534ad6fb0920"
+        },
+        {
+          "role": "data",
+          "selector": "4",
+          "source_product_image_index": "4",
+          "asset_path": "assets/style-library/style-packs/ref-05-blue-black-auto-keynote/data-01.png",
+          "content_type": "image/png",
+          "bytes": 1828317,
+          "sha256": "c0bbe63940a597fbc23aa90a6c8d4eb8ee1301e63322a40eab6704bbcab29302"
+        },
+        {
+          "role": "quote",
+          "selector": "5",
+          "source_product_image_index": "5",
+          "asset_path": "assets/style-library/style-packs/ref-05-blue-black-auto-keynote/quote-01.png",
+          "content_type": "image/png",
+          "bytes": 961274,
+          "sha256": "abd42b61018f4051188c6d710f6943620bf2ba81e10c32b0989499fa03409e17"
+        },
+        {
+          "role": "closing",
+          "selector": "15",
+          "source_product_image_index": "15",
+          "asset_path": "assets/style-library/style-packs/ref-05-blue-black-auto-keynote/closing-01.png",
+          "content_type": "image/png",
+          "bytes": 358582,
+          "sha256": "42005abfd539a51627debbe385d34bf0beb7d25aba2b825d1ae3938864af1172"
+        }
+      ],
+      "contact_sheet": "assets/style-library/style-packs/ref-05-blue-black-auto-keynote/contact-sheet.png",
+      "notes": "ZCOOL multi-image productImages pack. Blue-black automotive keynote evidence across intro, design spec, feature matrix, technology data pages, atmospheric statement page, dynamic divider, and closing. Use visual traits only; do not copy vehicle, brand, exhibition photos, source copy, or exact compositions."
+    },
+    {
+      "pack_id": "ref-07-black-red-hardware-cgi-limited",
+      "status": "limited",
+      "created_at": "2026-07-09T06:32:31.910190+00:00",
+      "source": "https://www.zcool.com.cn/work/ZNzI3NDM0OTI=.html",
+      "source_type": "zcool-work-page",
+      "usage_policy": "Reference visual style only. Do not copy source content, text, logos, brands, subjects, or page-specific claims.",
+      "coverage": [
+        "cover",
+        "section",
+        "body",
+        "process",
+        "compare",
+        "data",
+        "closing"
+      ],
+      "assets": [
+        {
+          "role": "cover",
+          "selector": "1",
+          "source_product_image_index": "1",
+          "asset_path": "assets/style-library/style-packs/ref-07-black-red-hardware-cgi-limited/cover-01.png",
+          "content_type": "image/png",
+          "bytes": 496127,
+          "sha256": "08fe14f6099ad49caff2eea049618207081b0aee8c07bb55ac250a603756372e"
+        },
+        {
+          "role": "section",
+          "selector": "5",
+          "source_product_image_index": "5",
+          "asset_path": "assets/style-library/style-packs/ref-07-black-red-hardware-cgi-limited/section-01.png",
+          "content_type": "image/png",
+          "bytes": 1412628,
+          "sha256": "a1571ca80d8bbabae2e72e0b4cb64ccede3620bafc1783b41f5e3b3e7834a02a"
+        },
+        {
+          "role": "body",
+          "selector": "2",
+          "source_product_image_index": "2",
+          "asset_path": "assets/style-library/style-packs/ref-07-black-red-hardware-cgi-limited/body-01.png",
+          "content_type": "image/png",
+          "bytes": 1184182,
+          "sha256": "4ffe2d6d885f145c52ff3e125ec80dbbb573d5c4f72947e4fde60323dd2c1892"
+        },
+        {
+          "role": "process",
+          "selector": "6",
+          "source_product_image_index": "6",
+          "asset_path": "assets/style-library/style-packs/ref-07-black-red-hardware-cgi-limited/process-01.png",
+          "content_type": "image/png",
+          "bytes": 1235745,
+          "sha256": "4526d8784ef3861687fe938d301f784ba94adda8daa3458027e8a983c0ea287d"
+        },
+        {
+          "role": "compare",
+          "selector": "10",
+          "source_product_image_index": "10",
+          "asset_path": "assets/style-library/style-packs/ref-07-black-red-hardware-cgi-limited/compare-01.png",
+          "content_type": "image/png",
+          "bytes": 1619017,
+          "sha256": "f4399a7dc3db61bdfe9318fb53b5107d28acc35c1ca21faf38d97f488c470f11"
+        },
+        {
+          "role": "data",
+          "selector": "11",
+          "source_product_image_index": "11",
+          "asset_path": "assets/style-library/style-packs/ref-07-black-red-hardware-cgi-limited/data-01.png",
+          "content_type": "image/png",
+          "bytes": 1521473,
+          "sha256": "c77eceb69b07511e7287e2563c938b4830304ff467213fffac35b7387c6770dd"
+        },
+        {
+          "role": "closing",
+          "selector": "12",
+          "source_product_image_index": "12",
+          "asset_path": "assets/style-library/style-packs/ref-07-black-red-hardware-cgi-limited/closing-01.png",
+          "content_type": "image/png",
+          "bytes": 1245661,
+          "sha256": "68491a766f63c524a2d9131d3e5661bd90a037e89d506df3cab44b10108eca65"
+        }
+      ],
+      "contact_sheet": "assets/style-library/style-packs/ref-07-black-red-hardware-cgi-limited/contact-sheet.png",
+      "notes": "ZCOOL multi-image productImages pack for black-red device KV and hardware CGI assets. Good for product hero, chip/camera technology visuals, and dark hardware launch mood, but limited as full PPT continuity evidence. Do not copy device design, brand marks, exact render, Chinese copy, or product-specific layout."
+    },
+    {
+      "pack_id": "ref-16-black-ai-collaboration-editorial",
+      "status": "ok",
+      "created_at": "2026-07-09T05:22:41.152767+00:00",
+      "source": "/Users/guozhi/Desktop/AI技术项目/小红书内容/小红书视频/AI做ppt/未命名文件夹",
+      "source_type": "image-folder",
+      "usage_policy": "Reference visual style only. Do not copy source content, text, logos, brands, subjects, or page-specific claims.",
+      "coverage": [
+        "cover",
+        "section",
+        "body",
+        "process",
+        "compare",
+        "data"
+      ],
+      "assets": [
+        {
+          "role": "cover",
+          "selector": "6",
+          "asset_path": "assets/style-library/style-packs/ref-16-black-ai-collaboration-editorial/cover-01.png",
+          "content_type": "image/png",
+          "bytes": 273547,
+          "sha256": "d9f7b7c69f9c5a1387ca09cdf857810db1d129e283f1de105676c6ae09b2db83"
+        },
+        {
+          "role": "section",
+          "selector": "5",
+          "asset_path": "assets/style-library/style-packs/ref-16-black-ai-collaboration-editorial/section-01.png",
+          "content_type": "image/png",
+          "bytes": 221700,
+          "sha256": "306632d529b679209c257e4f5a15038612265e2f9f19a27cb1db435826fba4d7"
+        },
+        {
+          "role": "body",
+          "selector": "1",
+          "asset_path": "assets/style-library/style-packs/ref-16-black-ai-collaboration-editorial/body-01.png",
+          "content_type": "image/png",
+          "bytes": 517397,
+          "sha256": "869bfe5b08fb81c0dba3cae2ce3581f0a3bc4d3b5560a366e0ff104cc9fbdb86"
+        },
+        {
+          "role": "process",
+          "selector": "2",
+          "asset_path": "assets/style-library/style-packs/ref-16-black-ai-collaboration-editorial/process-01.png",
+          "content_type": "image/png",
+          "bytes": 322363,
+          "sha256": "56fe7d15e79f829ec79888c6e839d9b84801e274a05aa42b1db5ae2a309e91f9"
+        },
+        {
+          "role": "compare",
+          "selector": "3",
+          "asset_path": "assets/style-library/style-packs/ref-16-black-ai-collaboration-editorial/compare-01.png",
+          "content_type": "image/png",
+          "bytes": 308162,
+          "sha256": "4e443a5ec28a0882c62cd15ab645bee9c56303b9f39193bea784976b38c3ed04"
+        },
+        {
+          "role": "data",
+          "selector": "4",
+          "asset_path": "assets/style-library/style-packs/ref-16-black-ai-collaboration-editorial/data-01.png",
+          "content_type": "image/png",
+          "bytes": 324607,
+          "sha256": "2585145fde7db4b8d56158b5b3d319e765c1785bc29c74561844d311aefdd776"
+        }
+      ],
+      "contact_sheet": "assets/style-library/style-packs/ref-16-black-ai-collaboration-editorial/contact-sheet.png",
+      "notes": "Local image folder from user. Use for black AI collaboration editorial deck rhythm; do not copy people, source text, or exact diagrams."
+    },
+    {
+      "pack_id": "ref-18-soft-editorial-muse-template",
+      "status": "ok",
+      "created_at": "2026-07-09T05:22:49.196977+00:00",
+      "source": "/Users/guozhi/Desktop/AI技术项目/小红书内容/小红书视频/AI做ppt/www-behance-net-gallery-134851785-muse-presentation-template-tracking_source-search_projects-ppt-l-43.pdf",
+      "source_type": "pdf",
+      "usage_policy": "Reference visual style only. Do not copy source content, text, logos, brands, subjects, or page-specific claims.",
+      "coverage": [
+        "cover",
+        "section",
+        "body",
+        "data",
+        "closing"
+      ],
+      "assets": [
+        {
+          "role": "cover",
+          "selector": "1",
+          "asset_path": "assets/style-library/style-packs/ref-18-soft-editorial-muse-template/cover-01.png",
+          "content_type": "image/png",
+          "bytes": 577332,
+          "sha256": "df62209bfa99603e17403d38e618ca5b42fd81a97f00f7ceb37c03722868dca1"
+        },
+        {
+          "role": "section",
+          "selector": "2",
+          "asset_path": "assets/style-library/style-packs/ref-18-soft-editorial-muse-template/section-01.png",
+          "content_type": "image/png",
+          "bytes": 613591,
+          "sha256": "87361eebc83e4e245e5d9c5ce6af201fc67e1bc98d72dd485def167a926fd476"
+        },
+        {
+          "role": "body",
+          "selector": "3",
+          "asset_path": "assets/style-library/style-packs/ref-18-soft-editorial-muse-template/body-01.png",
+          "content_type": "image/png",
+          "bytes": 622756,
+          "sha256": "78dafcdd9d3568e3fe606a52881d0303167f8f5bc110d24a11a88a3a1fcb79fa"
+        },
+        {
+          "role": "data",
+          "selector": "4",
+          "asset_path": "assets/style-library/style-packs/ref-18-soft-editorial-muse-template/data-01.png",
+          "content_type": "image/png",
+          "bytes": 675849,
+          "sha256": "42bad00b03bb32d3fa995494176142eeb7b708d3dd06f2f0bc41db65a5c1816c"
+        },
+        {
+          "role": "closing",
+          "selector": "5",
+          "asset_path": "assets/style-library/style-packs/ref-18-soft-editorial-muse-template/closing-01.png",
+          "content_type": "image/png",
+          "bytes": 220106,
+          "sha256": "6bb9729d08e5703573a4dbc554a5f9be59fb63338423e6459d5f8eb189111710"
+        }
+      ],
+      "contact_sheet": "assets/style-library/style-packs/ref-18-soft-editorial-muse-template/contact-sheet.png",
+      "notes": "Local PDF pages are Behance/template overview contact sheets. Use as palette/layout evidence, not as exact page composition."
+    },
+    {
+      "pack_id": "ref-19-red-glass-dark-pitch",
+      "status": "ok",
+      "created_at": "2026-07-09T05:22:57.039347+00:00",
+      "source": "/Users/guozhi/Desktop/AI技术项目/小红书内容/小红书视频/AI做ppt/www-behance-net-gallery-236313611-presentation-pitch-deck-prezentacija.pdf",
+      "source_type": "pdf",
+      "usage_policy": "Reference visual style only. Do not copy source content, text, logos, brands, subjects, or page-specific claims.",
+      "coverage": [
+        "cover",
+        "section",
+        "body",
+        "process",
+        "data",
+        "closing"
+      ],
+      "assets": [
+        {
+          "role": "cover",
+          "selector": "1",
+          "asset_path": "assets/style-library/style-packs/ref-19-red-glass-dark-pitch/cover-01.png",
+          "content_type": "image/png",
+          "bytes": 1988102,
+          "sha256": "a482192a19307ccd1c7139b5d1687023ac0694ca519c07f979931b7298e49024"
+        },
+        {
+          "role": "section",
+          "selector": "4",
+          "asset_path": "assets/style-library/style-packs/ref-19-red-glass-dark-pitch/section-01.png",
+          "content_type": "image/png",
+          "bytes": 1211330,
+          "sha256": "68e8776d2ddac78699cf453841fa108bcb0eff81cf8da9500ecbb71985096fde"
+        },
+        {
+          "role": "body",
+          "selector": "2",
+          "asset_path": "assets/style-library/style-packs/ref-19-red-glass-dark-pitch/body-01.png",
+          "content_type": "image/png",
+          "bytes": 1812025,
+          "sha256": "a34ea42b570d0f043a50e8241967ea49699e586e5385b54beeeac352ebe15a96"
+        },
+        {
+          "role": "process",
+          "selector": "3",
+          "asset_path": "assets/style-library/style-packs/ref-19-red-glass-dark-pitch/process-01.png",
+          "content_type": "image/png",
+          "bytes": 1907270,
+          "sha256": "49642b524b60b5b10370602b84a66a4105d16e781f125a49813b8a3482374680"
+        },
+        {
+          "role": "data",
+          "selector": "5",
+          "asset_path": "assets/style-library/style-packs/ref-19-red-glass-dark-pitch/data-01.png",
+          "content_type": "image/png",
+          "bytes": 1721132,
+          "sha256": "7f58cad7522d7d15bdf425d921dc2bba953a97cdec5b49508ad396130653a8b7"
+        },
+        {
+          "role": "closing",
+          "selector": "6",
+          "asset_path": "assets/style-library/style-packs/ref-19-red-glass-dark-pitch/closing-01.png",
+          "content_type": "image/png",
+          "bytes": 1097763,
+          "sha256": "920d982af3b5b273e25eb9772beb0baacbdede747fb24f5606b9b76244d102ba"
+        }
+      ],
+      "contact_sheet": "assets/style-library/style-packs/ref-19-red-glass-dark-pitch/contact-sheet.png",
+      "notes": "Local PDF reference for red glass dark pitch visual system. Do not copy Russian text, logos, QR codes, or glass object shape."
+    },
+    {
+      "pack_id": "ref-20-black-blue-saas-proposal",
+      "status": "ok",
+      "created_at": "2026-07-09T05:22:50.693014+00:00",
+      "source": "/Users/guozhi/Desktop/AI技术项目/小红书内容/小红书视频/AI做ppt/www-behance-net-gallery-249352711-presentation-design-for-a-business-proposal-tracking_source-search_projects-ppt-l-5.pdf",
+      "source_type": "pdf",
+      "usage_policy": "Reference visual style only. Do not copy source content, text, logos, brands, subjects, or page-specific claims.",
+      "coverage": [
+        "cover",
+        "body",
+        "data",
+        "closing"
+      ],
+      "assets": [
+        {
+          "role": "cover",
+          "selector": "3",
+          "asset_path": "assets/style-library/style-packs/ref-20-black-blue-saas-proposal/cover-01.png",
+          "content_type": "image/png",
+          "bytes": 849316,
+          "sha256": "e05981682171474e07188aa7ef4dd84014cdff4238d1723eca6f7efc908222ae"
+        },
+        {
+          "role": "body",
+          "selector": "4",
+          "asset_path": "assets/style-library/style-packs/ref-20-black-blue-saas-proposal/body-01.png",
+          "content_type": "image/png",
+          "bytes": 1261182,
+          "sha256": "3553c941f09ba1b27d7b9c27e4aad38d3554e600e44e106f5c4545d0ebda40a3"
+        },
+        {
+          "role": "data",
+          "selector": "5",
+          "asset_path": "assets/style-library/style-packs/ref-20-black-blue-saas-proposal/data-01.png",
+          "content_type": "image/png",
+          "bytes": 1420862,
+          "sha256": "b9661b9ead0885cc806e7b309092d73af5749ff01d829aa05e8210e8e4edca9d"
+        },
+        {
+          "role": "closing",
+          "selector": "6",
+          "asset_path": "assets/style-library/style-packs/ref-20-black-blue-saas-proposal/closing-01.png",
+          "content_type": "image/png",
+          "bytes": 235335,
+          "sha256": "670bb29a26f53918d17c0540e60cb9dbe074c44b9b19537204169a14b29da755"
+        }
+      ],
+      "contact_sheet": "assets/style-library/style-packs/ref-20-black-blue-saas-proposal/contact-sheet.png",
+      "notes": "Local PDF reference for black-blue SaaS proposal. Pages 1-2 are loading/weak evidence and are intentionally skipped."
+    },
+    {
+      "pack_id": "ref-23-black-orange-auto-marketing-strategy",
+      "status": "ok",
+      "created_at": "2026-07-09T14:57:37.781838+00:00",
+      "source": "/Users/guozhi/Downloads/www-001ppt-com-ai-read-2056612897789104130.pdf",
+      "source_type": "pdf-embedded-slide-images",
+      "usage_policy": "Reference visual style only. Do not copy source content, text, logos, brands, subjects, or page-specific claims.",
+      "coverage": [
+        "cover",
+        "section",
+        "body",
+        "process",
+        "compare",
+        "data"
+      ],
+      "assets": [
+        {
+          "role": "cover",
+          "selector": "X85.jpg",
+          "asset_path": "assets/style-library/style-packs/ref-23-black-orange-auto-marketing-strategy/cover-01.png",
+          "content_type": "image/png",
+          "bytes": 214391,
+          "sha256": "2a0bc96140a3bc1606073dd49c28219288e761d8b7ab80d7376d973eed50b96c"
+        },
+        {
+          "role": "section",
+          "selector": "X87.jpg",
+          "asset_path": "assets/style-library/style-packs/ref-23-black-orange-auto-marketing-strategy/section-01.png",
+          "content_type": "image/png",
+          "bytes": 176482,
+          "sha256": "da5d6e0fbb33392f83186a6eb15fa0a63cb566c6eaa6e63d35ddafcb0a5af52d"
+        },
+        {
+          "role": "body",
+          "selector": "X96.jpg",
+          "asset_path": "assets/style-library/style-packs/ref-23-black-orange-auto-marketing-strategy/body-01.png",
+          "content_type": "image/png",
+          "bytes": 234665,
+          "sha256": "aa6ede11d41af14bf40e4e6ba69e6fb6112503583288d8106f62f01f81a59fe0"
+        },
+        {
+          "role": "process",
+          "selector": "X91.jpg",
+          "asset_path": "assets/style-library/style-packs/ref-23-black-orange-auto-marketing-strategy/process-01.png",
+          "content_type": "image/png",
+          "bytes": 336072,
+          "sha256": "7bfd4ff4880565607d6b1faf870a2ff219b03292d64680c1c969b515aa3b009a"
+        },
+        {
+          "role": "compare",
+          "selector": "X94.jpg",
+          "asset_path": "assets/style-library/style-packs/ref-23-black-orange-auto-marketing-strategy/compare-01.png",
+          "content_type": "image/png",
+          "bytes": 163911,
+          "sha256": "59b93f54a3d6d979635b5fb8be724419854af41c3ad3664aa9780b24827d057e"
+        },
+        {
+          "role": "data",
+          "selector": "X88.jpg",
+          "asset_path": "assets/style-library/style-packs/ref-23-black-orange-auto-marketing-strategy/data-01.png",
+          "content_type": "image/png",
+          "bytes": 133733,
+          "sha256": "a86a08be0b425e1e5b6b415f098489ac8fb941e9a00b0449088f3cf499be3aa9"
+        }
+      ],
+      "contact_sheet": "assets/style-library/style-packs/ref-23-black-orange-auto-marketing-strategy/contact-sheet.png",
+      "notes": "Local PDF reference from /Users/guozhi/Downloads/www-001ppt-com-ai-read-2056612897789104130.pdf. Clean embedded slide images were extracted from a webpage-converted PDF; pages 4-6 in the PDF are mostly loading placeholders and are intentionally excluded. Use visual style only: black/charcoal automotive-marketing deck, orange accent system, card-based data blocks, cinematic product cover, and compact dark report layouts. Do not copy Xiaomi/YU7 branding, vehicle imagery, source text, charts, metrics, icons, page order, or marketing claims.",
+      "source_extraction": "pypdf extracted clean embedded 800x450 slide images from the webpage-converted PDF; loading placeholder PDF pages were excluded."
+    }
+  ],
+  "updated_at": "2026-07-09T14:57:37.783414+00:00"
+}

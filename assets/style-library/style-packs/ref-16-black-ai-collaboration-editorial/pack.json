@@ -1,0 +1,68 @@
+{
+  "pack_id": "ref-16-black-ai-collaboration-editorial",
+  "status": "ok",
+  "created_at": "2026-07-09T05:22:41.152767+00:00",
+  "source": "/Users/guozhi/Desktop/AI技术项目/小红书内容/小红书视频/AI做ppt/未命名文件夹",
+  "source_type": "image-folder",
+  "usage_policy": "Reference visual style only. Do not copy source content, text, logos, brands, subjects, or page-specific claims.",
+  "coverage": [
+    "cover",
+    "section",
+    "body",
+    "process",
+    "compare",
+    "data"
+  ],
+  "assets": [
+    {
+      "role": "cover",
+      "selector": "6",
+      "asset_path": "assets/style-library/style-packs/ref-16-black-ai-collaboration-editorial/cover-01.png",
+      "content_type": "image/png",
+      "bytes": 273547,
+      "sha256": "d9f7b7c69f9c5a1387ca09cdf857810db1d129e283f1de105676c6ae09b2db83"
+    },
+    {
+      "role": "section",
+      "selector": "5",
+      "asset_path": "assets/style-library/style-packs/ref-16-black-ai-collaboration-editorial/section-01.png",
+      "content_type": "image/png",
+      "bytes": 221700,
+      "sha256": "306632d529b679209c257e4f5a15038612265e2f9f19a27cb1db435826fba4d7"
+    },
+    {
+      "role": "body",
+      "selector": "1",
+      "asset_path": "assets/style-library/style-packs/ref-16-black-ai-collaboration-editorial/body-01.png",
+      "content_type": "image/png",
+      "bytes": 517397,
+      "sha256": "869bfe5b08fb81c0dba3cae2ce3581f0a3bc4d3b5560a366e0ff104cc9fbdb86"
+    },
+    {
+      "role": "process",
+      "selector": "2",
+      "asset_path": "assets/style-library/style-packs/ref-16-black-ai-collaboration-editorial/process-01.png",
+      "content_type": "image/png",
+      "bytes": 322363,
+      "sha256": "56fe7d15e79f829ec79888c6e839d9b84801e274a05aa42b1db5ae2a309e91f9"
+    },
+    {
+      "role": "compare",
+      "selector": "3",
+      "asset_path": "assets/style-library/style-packs/ref-16-black-ai-collaboration-editorial/compare-01.png",
+      "content_type": "image/png",
+      "bytes": 308162,
+      "sha256": "4e443a5ec28a0882c62cd15ab645bee9c56303b9f39193bea784976b38c3ed04"
+    },
+    {
+      "role": "data",
+      "selector": "4",
+      "asset_path": "assets/style-library/style-packs/ref-16-black-ai-collaboration-editorial/data-01.png",
+      "content_type": "image/png",
+      "bytes": 324607,
+      "sha256": "2585145fde7db4b8d56158b5b3d319e765c1785bc29c74561844d311aefdd776"
+    }
+  ],
+  "contact_sheet": "assets/style-library/style-packs/ref-16-black-ai-collaboration-editorial/contact-sheet.png",
+  "notes": "Local image folder from user. Use for black AI collaboration editorial deck rhythm; do not copy people, source text, or exact diagrams."
+}

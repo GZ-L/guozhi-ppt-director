@@ -1,0 +1,84 @@
+{
+  "pack_id": "ref-04-dark-sci-fi-ring-tutorial",
+  "status": "ok",
+  "created_at": "2026-07-09T06:31:28.220810+00:00",
+  "source": "https://www.zcool.com.cn/work/ZNjUxNzEyODQ=.html",
+  "source_type": "zcool-work-page",
+  "usage_policy": "Reference visual style only. Do not copy source content, text, logos, brands, subjects, or page-specific claims.",
+  "coverage": [
+    "cover",
+    "section",
+    "body",
+    "process",
+    "compare",
+    "data",
+    "quote"
+  ],
+  "assets": [
+    {
+      "role": "cover",
+      "selector": "2",
+      "source_product_image_index": "2",
+      "asset_path": "assets/style-library/style-packs/ref-04-dark-sci-fi-ring-tutorial/cover-01.png",
+      "content_type": "image/png",
+      "bytes": 1809998,
+      "sha256": "19b9c8bedf0eeb0913b8132deb0cec3e0a0b797b903036159db5d514f792b9b4"
+    },
+    {
+      "role": "section",
+      "selector": "3",
+      "source_product_image_index": "3",
+      "asset_path": "assets/style-library/style-packs/ref-04-dark-sci-fi-ring-tutorial/section-01.png",
+      "content_type": "image/png",
+      "bytes": 324269,
+      "sha256": "a4396160a79b6b8946b27ac5b70558dfd0f961c189d3031d8cc391f91a8de237"
+    },
+    {
+      "role": "body",
+      "selector": "4",
+      "source_product_image_index": "4",
+      "asset_path": "assets/style-library/style-packs/ref-04-dark-sci-fi-ring-tutorial/body-01.png",
+      "content_type": "image/png",
+      "bytes": 750760,
+      "sha256": "ab08921ff9265a69a5ac888a4dac5d2a4902a843669078696c6fe815f7d94e01"
+    },
+    {
+      "role": "process",
+      "selector": "5",
+      "source_product_image_index": "5",
+      "asset_path": "assets/style-library/style-packs/ref-04-dark-sci-fi-ring-tutorial/process-01.png",
+      "content_type": "image/png",
+      "bytes": 681410,
+      "sha256": "e27760a3062549c99042eb5e9efc8c8a3124dbe2b8bb99871b804fcfaf4c5977"
+    },
+    {
+      "role": "compare",
+      "selector": "6",
+      "source_product_image_index": "6",
+      "asset_path": "assets/style-library/style-packs/ref-04-dark-sci-fi-ring-tutorial/compare-01.png",
+      "content_type": "image/png",
+      "bytes": 716014,
+      "sha256": "200cad6ac9d572f7f5c816b703a5a5e8da26e5a8779252092be317f4743847dc"
+    },
+    {
+      "role": "data",
+      "selector": "9",
+      "source_product_image_index": "9",
+      "asset_path": "assets/style-library/style-packs/ref-04-dark-sci-fi-ring-tutorial/data-01.png",
+      "content_type": "image/png",
+      "bytes": 694086,
+      "sha256": "c8a51d4d345e956383bb703adc93e13d244b6908e31f242396aa9469afbc7864"
+    },
+    {
+      "role": "quote",
+      "selector": "8",
+      "source_product_image_index": "8",
+      "asset_path": "assets/style-library/style-packs/ref-04-dark-sci-fi-ring-tutorial/quote-01.png",
+      "content_type": "image/png",
+      "bytes": 686922,
+      "sha256": "9311843397a1d05e1412cda727cbc3793f2809e281c7735e56fa704cbc536fb5"
+    }
+  ],
+  "contact_sheet": "assets/style-library/style-packs/ref-04-dark-sci-fi-ring-tutorial/contact-sheet.png",
+  "notes": "ZCOOL multi-image productImages pack. Dark sci-fi ring and light-effect tutorial evidence across hero, alternate divider, explanation/process pages, and parameter-like software panels. Use for dark future-tech/methodology decks cautiously; do not copy tutorial screenshots, Chinese copy, source labels, or exact ring composition."
+}
