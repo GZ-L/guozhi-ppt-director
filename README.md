@@ -87,6 +87,28 @@ Agent 调用示例：
 
 完整调用顺序以 [`CALLING_SPEC.md`](CALLING_SPEC.md) 为唯一运行规范；修改 Skill 前先读 [`MAINTENANCE_SPEC.md`](MAINTENANCE_SPEC.md)。本次对话中真实出现的交互、回归缺陷和 Agent 示例见 [`examples/REAL_CASES.md`](examples/REAL_CASES.md)。
 
+## 真实案例
+
+以下案例来自实际运行，仓库同时提供可编辑 PPTX 与全页预览。完整索引和验证记录见 [`examples/decks/README.md`](examples/decks/README.md)。
+
+### AI 知识库：动漫扁平插画风
+
+[下载 5 页可编辑 PPTX](examples/decks/ai-knowledge-flat-illustration/deck.pptx)
+
+![AI 知识库动漫扁平插画风案例](examples/decks/ai-knowledge-flat-illustration/preview.png)
+
+### Life Design Prompt：ref-16 黑色 AI 编辑风
+
+[下载 6 页可编辑 PPTX](examples/decks/life-design-ref16/deck.pptx)
+
+![Life Design Prompt ref-16 案例](examples/decks/life-design-ref16/preview.png)
+
+### Identity Skill：DashiAI 路线
+
+[下载 6 页带演讲备注 PPTX](examples/decks/identity-skill-dashiai/deck.pptx)
+
+![Identity Skill DashiAI 案例](examples/decks/identity-skill-dashiai/preview.png)
+
 ## 实际效果
 
 Skill 将不完整请求归一化为一套可确认配置，禁止在 `confirmed` 和 `planned` 之前渲染，并把故事结构、风格锁定、页面角色、渲染路线和 QA 证据记录在同一个运行包中。单图参考默认只能用于封面；完整演示优先使用覆盖封面、正文、流程、数据和结尾等角色的多图风格包。
