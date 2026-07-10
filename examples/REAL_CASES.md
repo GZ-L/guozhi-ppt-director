@@ -1,6 +1,6 @@
 # Real Cases
 
-这些案例来自 `guozhi-ppt-director` 的真实使用过程，用于说明调用协议和回归保护。案例不附带用户 PDF、第三方截图或未经验证的演示成品，也不把历史字母选项重新解释为当前稳定 ID。
+这些案例来自 `guozhi-ppt-director` 的真实使用过程，用于说明调用协议和回归保护。经过验证并获得发布授权的 PPTX 与预览位于 [`examples/decks/`](decks/README.md)；案例不附带用户 PDF、第三方参考截图或未经验证的演示成品，也不把历史字母选项重新解释为当前稳定 ID。
 
 ## 案例一：PDF 转 6 页可编辑 PPTX
 
