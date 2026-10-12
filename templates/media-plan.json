@@ -1,0 +1,40 @@
+{
+  "protocol_version": "1.1",
+  "request_id": "request-123",
+  "run_id": "run-123",
+  "style_lock": "ref-16-black-ai-collaboration-editorial",
+  "style_authority": "ppt_style_lock",
+  "source_precedence": "authorized_source_first",
+  "text_policy": "editable_ppt_text",
+  "media_treatment_authority": "style_pack_assets",
+  "media_treatment_references": [
+    "assets/style-library/style-packs/ref-16-black-ai-collaboration-editorial/body-01.png"
+  ],
+  "fallback_image_form_policy": "visual_intent_only",
+  "slots": [
+    {
+      "slot_id": "media-slide-03",
+      "slide": 3,
+      "visual_need": true,
+      "reader_block": "An abstract workflow lacks a visual anchor.",
+      "visual_job": "Turn the three-stage workflow into a scannable relationship.",
+      "anchor_type": "explanatory",
+      "hero_thesis": "Routing quality matters more than tool count.",
+      "must_show": ["input", "decision", "output"],
+      "asset_priority": [
+        "authorized_source",
+        "native_ppt",
+        "generated_visual"
+      ],
+      "image_form": "process",
+      "aspect_ratio": "custom_slot",
+      "character_mode": "none",
+      "character_id": null,
+      "ppt_style_lock": "ref-16-black-ai-collaboration-editorial",
+      "style_transform": "inherit_ppt_style",
+      "text_policy": "editable_ppt_text",
+      "motion_intent": "Reveal one workflow stage at a time.",
+      "confirmation_required": false
+    }
+  ]
+}

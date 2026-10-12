@@ -1,4 +1,4 @@
 interface:
   display_name: "Guozhi PPT Director"
-  short_description: "Directs deterministic presentation workflows for human and Agent callers."
-  default_prompt: "Use $guozhi-ppt-director for this presentation task. Follow CALLING_SPEC.md, recommend one complete configuration, and stop with needs_input when a material decision is unresolved."
+  short_description: "Directs validated PPT, motion, video, style, and review workflows for human and Agent callers."
+  default_prompt: "Use $guozhi-ppt-director for this presentation task. Follow CALLING_SPEC.md, validate runtime payloads, show one recommended style plus two visually distinct previewed alternatives when style is unresolved, bind every media handoff to the validated media plan digest and confirmation-scoped generation request, keep the confirmed PPT style and its real template-image treatment authoritative over every generated image or IP character, restrict missing-subject analysis to visual_intent_only, treat general animation requests as grouped in-slide choreography with visible card/image entrances and final exported Shape ID resolution rather than transition-only or all-fade output, and require full-size per-slide visual QA plus collision verification before delivery."

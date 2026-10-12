@@ -1,0 +1,15 @@
+{
+  "slides": [
+    {
+      "slide": 1,
+      "groups": [
+        "^primary-surface$",
+        "^secondary-surface-[0-9]+$"
+      ],
+      "scopes": [
+        "slide"
+      ],
+      "min_gap_px": 0
+    }
+  ]
+}

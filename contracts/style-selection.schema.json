@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "guozhi-ppt-director/style-selection.schema.json",
+  "title": "Guozhi PPT Director Style Selection",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocol_version",
+    "selection_method",
+    "recommended_style_id",
+    "recent_style_ids",
+    "rejected_style_ids",
+    "candidates"
+  ],
+  "properties": {
+    "protocol_version": {"const": "1.1"},
+    "selection_method": {"const": "deterministic_fit_diversity_v1"},
+    "recommended_style_id": {"type": "string", "minLength": 1},
+    "recent_style_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "rejected_style_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "candidates": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "rank",
+          "style_id",
+          "style_name",
+          "style_category",
+          "visual_family",
+          "fit_score",
+          "repeat_penalty",
+          "effective_score",
+          "fit_evidence",
+          "visual_traits",
+          "preview_asset",
+          "preview_available",
+          "recommended"
+        ],
+        "properties": {
+          "rank": {"type": "integer", "minimum": 1, "maximum": 3},
+          "style_id": {"type": "string", "minLength": 1},
+          "style_name": {"type": "string", "minLength": 1},
+          "style_category": {"type": "string", "minLength": 1},
+          "visual_family": {"type": "string", "minLength": 1},
+          "fit_score": {"type": "integer", "minimum": 10, "maximum": 16},
+          "repeat_penalty": {"type": "integer", "minimum": 0, "maximum": 2},
+          "effective_score": {"type": "integer", "minimum": 8, "maximum": 16},
+          "fit_evidence": {"type": "string", "minLength": 1},
+          "visual_traits": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 5,
+            "items": {"type": "string", "minLength": 1}
+          },
+          "preview_asset": {"type": "string", "minLength": 1},
+          "preview_available": {"const": true},
+          "recommended": {"type": "boolean"}
+        }
+      }
+    }
+  }
+}

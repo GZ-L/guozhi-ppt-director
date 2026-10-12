@@ -1,24 +1,30 @@
 {
-  "protocol_version": "1.0",
+  "protocol_version": "1.1",
   "routes": [
     {
       "id": "native_pptx",
       "kind": "renderer",
       "deliverables": ["pptx"],
+      "motion_profiles": ["none", "pptx_basic_v1"],
+      "video_deliveries": ["embedded", "linked"],
       "requires_confirmation": true,
-      "capability_check": "native editable PPTX renderer available"
+      "capability_check": "native editable PPTX renderer available; pptx_basic_v1 uses scripts/check_motion_capabilities.py, scripts/resolve_pptx_motion_shape_ids.py, scripts/apply_pptx_basic_motion.py, and scripts/verify_pptx_motion.py"
     },
     {
       "id": "web_deck",
       "kind": "renderer",
       "deliverables": ["html"],
+      "motion_profiles": ["none", "web_motion_v1"],
+      "video_deliveries": ["web", "rendered_video"],
       "requires_confirmation": true,
-      "capability_check": "web deck renderer and preview available"
+      "capability_check": "web deck renderer and preview available; web_motion_v1 uses scripts/check_motion_capabilities.py and scripts/verify_web_motion.mjs"
     },
     {
       "id": "dual",
       "kind": "composite",
       "deliverables": ["pptx", "html"],
+      "motion_profiles": ["none", "dual_motion_v1"],
+      "video_deliveries": ["embedded", "linked", "web"],
       "requires_confirmation": true,
       "capability_check": "native PPTX and web deck renderers available"
     },
@@ -26,6 +32,8 @@
       "id": "dashiai",
       "kind": "external_renderer",
       "deliverables": ["html", "pptx", "pdf"],
+      "motion_profiles": ["none"],
+      "video_deliveries": [],
       "requires_confirmation": true,
       "capability_check": "scripts/check_dashiai_adapter.py"
     },
@@ -33,6 +41,8 @@
       "id": "review_only",
       "kind": "non_rendering",
       "deliverables": ["review"],
+      "motion_profiles": ["none"],
+      "video_deliveries": [],
       "requires_confirmation": false,
       "capability_check": "none"
     }

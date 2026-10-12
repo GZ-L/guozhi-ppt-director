@@ -4,9 +4,23 @@
   "title": "Guozhi PPT Director Result",
   "type": "object",
   "additionalProperties": false,
-  "required": ["protocol_version", "request_id", "operation", "status"],
+  "required": [
+    "protocol_version",
+    "request_id",
+    "run_id",
+    "operation",
+    "status",
+    "resolved_decisions",
+    "unresolved_fields",
+    "proposed_decisions",
+    "artifacts",
+    "verification",
+    "warnings",
+    "error",
+    "next_action"
+  ],
   "properties": {
-    "protocol_version": {"const": "1.0"},
+    "protocol_version": {"const": "1.1"},
     "request_id": {"type": "string", "minLength": 1},
     "run_id": {"type": ["string", "null"]},
     "operation": {
@@ -37,12 +51,19 @@
     },
     "resolved_decisions": {"type": "object"},
     "unresolved_fields": {"type": "array", "items": {"type": "string"}},
-    "proposed_decisions": {"type": "object"},
+    "proposed_decisions": {
+      "type": "object",
+      "properties": {
+        "recommended_style_id": {"type": "string"},
+        "style_candidates": {"$ref": "style-selection.schema.json"}
+      }
+    },
     "artifacts": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["type", "path"],
+        "additionalProperties": false,
+        "required": ["type", "path", "verified"],
         "properties": {
           "type": {"type": "string"},
           "path": {"type": "string"},
@@ -51,8 +72,25 @@
       }
     },
     "warnings": {"type": "array", "items": {"type": "string"}},
+    "verification": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["capability", "level", "target", "verified", "evidence"],
+        "properties": {
+          "capability": {"enum": ["motion", "video"]},
+          "level": {"enum": ["declared", "structural", "playback"]},
+          "target": {"type": "string", "minLength": 1},
+          "verified": {"type": "boolean"},
+          "evidence": {"type": ["string", "null"]}
+        }
+      }
+    },
     "error": {
       "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["code", "stage", "message", "evidence"],
       "properties": {
         "code": {"type": "string"},
         "stage": {"type": "string"},

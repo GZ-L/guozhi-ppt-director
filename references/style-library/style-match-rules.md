@@ -1,6 +1,6 @@
 # Style Match Rules
 
-Use these rules to produce one reproducible style recommendation from explicit run inputs.
+Use these rules to produce a deterministic `style_candidates` set from explicit run inputs. It contains three eligible style candidates: one recommended candidate and two visual alternatives. Selection is never random.
 
 ## Eligibility
 
@@ -21,12 +21,31 @@ Score each eligible candidate from 0 to 2 on eight dimensions:
 | Mood | conflicts | partial | matches explicit mood |
 | Density | cannot hold content | requires simplification | matches content density |
 | Deliverable | incompatible | usable with risk | native fit |
-| Media | incompatible slots | partial support | direct support |
+| Media | no usable treatment evidence | partial image treatment evidence | direct multi-role evidence for dimensionality, material, lighting, depth, and image method |
 | Role coverage | missing critical roles | gaps accepted | covers all required roles |
 
 Minimum recommendation score: `10/16` with no zero in deliverable or role coverage.
 
 Record each score and one evidence phrase. Do not replace the total because another reference “feels better.”
+
+## Repeat Penalty
+
+- Read `recent_style_ids` from up to the three most recent completed deck manifests available to the caller. Use an empty list when no history is available.
+- Subtract `2` from a candidate's fit score when its ID appears in `recent_style_ids`; otherwise subtract `0`.
+- `effective_score = fit_score - repeat_penalty`.
+- An explicitly rejected style ID is ineligible for the current run.
+- The penalty changes deterministic ranking; it is not random rotation.
+
+## Candidate Construction
+
+1. Sort eligible candidates by effective score, then apply the tie-break rules below.
+2. Rank the highest candidate as `recommended_style_id`.
+3. Select the highest remaining candidate with a different indexed `visual_family` as visual alternative 1.
+4. Select the highest remaining candidate whose indexed `visual_family` differs from both prior candidates as visual alternative 2.
+5. Require readable Preview asset files for all three candidates.
+6. Serialize with `contracts/style-selection.schema.json` and validate using `scripts/validate_runtime_payload.py --kind style_selection`.
+
+If three qualified visual families are unavailable, return `needs_input`; do not lower the fit threshold, reuse a visual family, or fill the set randomly.
 
 ## Tie-Break
 
@@ -58,6 +77,8 @@ Write the result into the run manifest and `style-match.md`:
 
 - input evidence;
 - candidate scores;
+- `style_candidates` and `recommended_style_id`;
+- recent-style evidence, repeat penalties, indexed visual families, and Preview asset paths;
 - recommended and confirmed style IDs;
 - selected assets and role coverage;
 - fidelity rules and prohibited content;

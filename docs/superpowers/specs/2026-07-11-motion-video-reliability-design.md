@@ -62,7 +62,7 @@ Add optional `motion` and `video` objects under invocation constraints and run-m
 
 - `requested`: boolean;
 - `profile_id`: `none`, `web_motion_v1`, `pptx_basic_v1`, or `dual_motion_v1`;
-- `playback_target`: `browser`, `powerpoint_365_windows`, or `powerpoint_365_macos`;
+- `playback_targets`: one or more of `browser`, `powerpoint_365_windows`, or `powerpoint_365_macos`; dual playback records both browser and PowerPoint targets;
 - `verification_required`: `structural` or `playback`;
 - `advance`: `manual`, `timed`, or `mixed`;
 - `reduced_motion_fallback`: boolean.
@@ -82,7 +82,7 @@ Each video media slot records source path, MIME type, duration when available, t
 ## Runtime Flow
 
 1. Normalize motion language such as “动效展示”, “动画 PPT”, “带视频”, or “导出视频”.
-2. Resolve route, motion profile, playback target, video policy, and required verification before confirmation.
+2. Resolve route, motion profile, playback targets, video policy, and required verification before confirmation.
 3. Run renderer capability checks before planning concrete builds.
 4. Freeze semantic reveal steps in layout contracts. Renderers may not invent additional animation.
 5. Generate the artifact through the confirmed adapter.

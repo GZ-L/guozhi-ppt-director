@@ -1,0 +1,30 @@
+{
+  "profile_id": "pptx_basic_v1",
+  "choreography_mode": "in_slide_grouped_v1",
+  "slides": [
+    {
+      "slide": 1,
+      "motion_job": "Reveal one logical card, diagram stage, or conclusion at a time",
+      "transition": "fade",
+      "groups": [
+        {
+          "group_id": "card_one",
+          "intent": "Show the card background, accent, title, and copy as one visual unit",
+          "shape_names": [
+            "card-one-surface",
+            "card-one-title",
+            "card-one-copy"
+          ],
+          "shape_ids": [
+            2,
+            3,
+            4
+          ],
+          "effect": "slide_from_bottom",
+          "trigger": "after_previous",
+          "duration_ms": 500
+        }
+      ]
+    }
+  ]
+}

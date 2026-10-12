@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "guozhi-ppt-director/run-manifest.schema.json",
+  "title": "Guozhi PPT Director Run Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocol_version",
+    "request_id",
+    "run_id",
+    "operation",
+    "interaction_mode",
+    "status",
+    "state_history",
+    "source",
+    "resolved_decisions",
+    "unresolved_fields",
+    "proposed_decisions",
+    "capabilities",
+    "artifacts",
+    "warnings",
+    "verification",
+    "error",
+    "next_action",
+    "confirmation"
+  ],
+  "properties": {
+    "protocol_version": {"const": "1.1"},
+    "request_id": {"type": "string"},
+    "run_id": {"type": "string"},
+    "operation": {"enum": ["deck.create", "deck.revise"]},
+    "interaction_mode": {"enum": ["human", "agent"]},
+    "status": {
+      "enum": [
+        "received",
+        "normalized",
+        "needs_input",
+        "confirmed",
+        "planned",
+        "rendering",
+        "qa",
+        "completed",
+        "blocked",
+        "failed"
+      ]
+    },
+    "state_history": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "received",
+          "normalized",
+          "needs_input",
+          "confirmed",
+          "planned",
+          "rendering",
+          "qa",
+          "completed",
+          "blocked",
+          "failed"
+        ]
+      }
+    },
+    "source": {"type": "array"},
+    "resolved_decisions": {"type": "object"},
+    "unresolved_fields": {"type": "array", "items": {"type": "string"}},
+    "proposed_decisions": {
+      "type": "object",
+      "properties": {
+        "recommended_style_id": {"type": "string"},
+        "style_candidates": {"$ref": "style-selection.schema.json"}
+      }
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {"$ref": "capability-handoff.schema.json"}
+    },
+    "artifacts": {"type": "array"},
+    "warnings": {"type": "array", "items": {"type": "string"}},
+    "verification": {"type": "array"},
+    "error": {"type": ["object", "null"]},
+    "next_action": {"type": ["string", "null"]},
+    "confirmation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "exact_text"],
+      "properties": {
+        "status": {"enum": ["pending", "confirmed", "defaults_authorized"]},
+        "exact_text": {"type": ["string", "null"]}
+      }
+    }
+  }
+}

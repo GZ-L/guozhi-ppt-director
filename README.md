@@ -2,11 +2,11 @@
 
 ## 这是什么
 
-`guozhi-ppt-director` 是一个面向 Codex 与 Agent 的中文 PPT 导演 Skill。仓库根目录的 `SKILL.md` 是触发入口；它把文章、PDF、链接、脚本或业务资料转成经过确认的演示方案，并协调 PPTX、网页演示、PDF、DashiAI 渲染和质量检查。
+`guozhi-ppt-director` 是一个面向 Codex 与 Agent 的中文 PPT 导演 Skill。仓库根目录的 `SKILL.md` 是触发入口；它把文章、PDF、链接、脚本或业务资料转成经过确认的演示方案，并协调 PPTX、网页演示、PDF、DashiAI、动效、文章视觉意图分析、配图与视频渲染和质量检查。
 
 ## 它解决什么问题
 
-普通“文章转 PPT”流程容易直接猜页数、猜风格、混用渲染器，或者只参考封面导致整套页面僵硬。这个 Skill 用稳定协议约束完整流程：先归一化输入，再给出一个完整推荐，确认页数、交付格式、路线和风格后才允许渲染。
+普通“文章转 PPT”流程容易直接猜页数、长期重复推荐同一风格、混用渲染器，或者只参考封面导致整套页面僵硬。这个 Skill 用稳定协议约束完整流程：先归一化输入，再给出一个完整配置和三个带预览的风格候选，确认页数、交付格式、路线和具体风格后才允许渲染。
 
 ## 适合谁
 
@@ -25,15 +25,20 @@
 - 页数、演讲时长、语言、交付格式、演讲备注和改写边界等约束。
 - 风格库 ID、`preserve_existing`，或 DashiAI 主题。
 - 人类交互模式 `human` 或 Agent 交互模式 `agent`。
+- 可选动效 profile、页面内分组编排、播放目标、验证等级，以及视频播放/声音/循环/封面/失败回退策略。
 
 机器调用遵循 [`contracts/invocation.schema.json`](contracts/invocation.schema.json)，稳定操作包括 `deck.create`、`deck.revise`、`deck.review`、`style.list`、`style.add`、`style.update`、`style.remove` 和 `help`。
 
 ## 输出
 
-- 机器可读的 `run-manifest.json` 和结果信封。
-- 简报、提纲、风格匹配、风格板、制作路线和 QA 报告。
+- 符合 [`contracts/run-manifest.schema.json`](contracts/run-manifest.schema.json) 的 `run-manifest.json` 和结果信封。
+- 简报、提纲、风格匹配、风格板、制作路线、可选 `motion-plan.json`、经验证的 `media-plan.json` 和 QA 报告。
 - 按确认路线生成并验证的 PPTX、HTML、PDF 或审查结果。
 - Agent 模式下符合 [`contracts/result.schema.json`](contracts/result.schema.json) 的结构化结果。
+
+结构化调用、运行清单、能力交接、三候选风格选择、媒体规划和结果返回分别使用 `scripts/validate_runtime_payload.py --kind invocation|manifest|handoff|style_selection|media_plan|result` 校验。父 Agent 只接收通过校验的结果信封。
+
+直接调用本 Skill 时，由当前宿主 Agent 按 capability role 调用来源提取、配图、渲染和视觉 QA 能力。作为父 Agent 的一个功能使用时，父 Agent 以 `interaction_mode: agent` 调用 Director，并通过同一个结果信封处理确认或阻塞；不假设存在独立的 Skill-to-Skill RPC。媒体能力交接必须绑定计划路径和摘要，区分 `baseline_preview` 与 `production_assets`，并逐槽返回可验证资产证明。
 
 ## 安装
 
@@ -65,7 +70,7 @@ Agent 调用示例：
 
 ```json
 {
-  "protocol_version": "1.0",
+  "protocol_version": "1.1",
   "request_id": "req-demo-001",
   "operation": "deck.create",
   "interaction_mode": "agent",
@@ -79,7 +84,16 @@ Agent 调用示例：
     "route_id": "native_pptx",
     "style_id": "ref-16-black-ai-collaboration-editorial",
     "rewrite_boundary": "rebuild",
-    "speaker_notes": true
+    "speaker_notes": true,
+    "motion": {
+      "requested": true,
+      "profile_id": "pptx_basic_v1",
+      "playback_targets": ["powerpoint_365_macos"],
+      "verification_required": "structural",
+      "advance": "manual",
+      "reduced_motion_fallback": true
+    },
+    "video": {"requested": false}
   },
   "confirmation": {"status": "confirmed", "exact_text": "按已确认配置执行"}
 }
@@ -113,14 +127,19 @@ Agent 调用示例：
 
 Skill 将不完整请求归一化为一套可确认配置，禁止在 `confirmed` 和 `planned` 之前渲染，并把故事结构、风格锁定、页面角色、渲染路线和 QA 证据记录在同一个运行包中。单图参考默认只能用于封面；完整演示优先使用覆盖封面、正文、流程、数据和结尾等角色的多图风格包。
 
+文章配图先分析每页的阅读障碍、核心结论和必须展示的事实，再选择来源图片、产品截图、原生 PPT 图表或生成图。所选模板中的真实图片负责锁定立体感、材质、光影、景深、摄影/CGI/插画方法与裁切尺度。只有缺少合适主体时，外部 IP/配图能力才以 `visual_intent_only` 提供角色关系或构图形式；所有生成与重绘结果都必须沿用模板的图片质感，不允许把外部手绘默认画风覆盖整套演示。
+
 ## 边界与非目标
 
 - 不在信息缺失时主观猜测页数、路线或风格。
 - 不用 A/B/C 等字母代替稳定路线或风格 ID。
 - 不复制参考图中的文字、品牌、人物、产品、插画、声明或精确构图。
 - 不把 DashiAI 代码或资产内嵌进本仓库；它只作为可选外部渲染器。
+- 不复制 Xiaohu IP Studio 的角色库、皮肤、提示词或图片资产；它只能作为可选的视觉意图/配图能力适配器，且不能覆盖已确认的 PPT 风格。
 - 不承诺所有来源都能自动抓取；登录墙、失效链接和权限不足会返回 `blocked` 或 `needs_input`。
 - 不把未验证的文件标记为 `completed`。
+- 不把静态 PPTX 描述成带动效；结构验证与 PowerPoint 实播验证分开记录。
+- 当前原生动效承诺 `pptx_basic_v1` 的淡入切换，以及 `in_slide_grouped_v1` 页面内分组出现、淡入、方向擦除和方向进入。动态卡片或图片请求会使用稳定对象名、导出后 Shape ID 解析和多种可见进入效果，不能只用页面切换或无解释的全淡入交付；不承诺任意 PowerPoint 特效或 WPS/Keynote 完全一致。
 
 ## 来源说明
 
@@ -133,6 +152,10 @@ Skill 将不完整请求归一化为一套可确认配置，禁止在 `confirmed
 ```bash
 python3 scripts/validate_contract.py
 python3 -m unittest discover -s tests -p 'test_*.py' -v
+python3 scripts/check_motion_capabilities.py --json
+python3 -m unittest tests.test_contract.PptxMotionWriterTests -v
+python3 -m unittest tests.test_contract.VideoAssetVerificationTests -v
+NODE_PATH="<node_modules containing playwright>" python3 -m unittest tests.test_contract.WebMotionVerificationTests -v
 python3 "$HOME/.codex/skills/standard-skill-maker/scripts/validate_skill.py" .
 python3 "$HOME/.codex/skills/.system/skill-creator/scripts/quick_validate.py" .
 ```

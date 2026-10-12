@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "guozhi-ppt-director/capability-handoff.schema.json",
+  "title": "Guozhi PPT Director Capability Handoff",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocol_version",
+    "request_id",
+    "run_id",
+    "capability_id",
+    "role",
+    "status",
+    "producer",
+    "input",
+    "output",
+    "version",
+    "error"
+  ],
+  "properties": {
+    "protocol_version": {"const": "1.1"},
+    "request_id": {"type": "string", "minLength": 1},
+    "run_id": {"type": "string", "minLength": 1},
+    "capability_id": {"type": "string", "minLength": 1},
+    "role": {
+      "enum": ["source_adapter", "media_generator", "renderer", "visual_qa"]
+    },
+    "status": {"enum": ["requested", "completed", "blocked", "failed"]},
+    "producer": {"type": "string", "minLength": 1},
+    "input": {"type": "object"},
+    "output": {"type": "object"},
+    "version": {"type": ["string", "null"]},
+    "director_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["route_id", "page_count", "style_lock", "story_digest"],
+      "properties": {
+        "route_id": {
+          "enum": ["native_pptx", "web_deck", "dual", "dashiai", "review_only"]
+        },
+        "page_count": {"type": "integer", "minimum": 1},
+        "style_lock": {"type": "string", "minLength": 1},
+        "story_digest": {"type": "string", "minLength": 1},
+        "layout_contract_path": {"type": ["string", "null"]},
+        "media_plan_path": {"type": ["string", "null"]},
+        "media_plan_digest": {
+          "type": ["string", "null"],
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "confirmation_status": {
+          "enum": ["pending", "confirmed", "defaults_authorized", null]
+        }
+      }
+    },
+    "error": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["code", "message", "evidence"],
+      "properties": {
+        "code": {"type": "string", "minLength": 1},
+        "message": {"type": "string", "minLength": 1},
+        "evidence": {"type": ["string", "null"]}
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"role": {"const": "media_generator"}}},
+      "then": {
+        "required": ["director_context"],
+        "properties": {
+          "input": {
+            "required": ["media_slots", "generation_scope"],
+            "properties": {
+              "media_slots": {
+                "type": "array",
+                "minItems": 1,
+                "items": {"type": "object"}
+              },
+              "generation_scope": {
+                "enum": ["baseline_preview", "production_assets"]
+              }
+            }
+          },
+          "director_context": {
+            "required": [
+              "media_plan_path",
+              "media_plan_digest",
+              "confirmation_status"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "role": {"const": "media_generator"},
+          "status": {"const": "completed"}
+        }
+      },
+      "then": {
+        "properties": {
+          "output": {
+            "required": ["assets"],
+            "properties": {
+              "assets": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "asset_id",
+                    "slot_id",
+                    "path_or_url",
+                    "source_type",
+                    "ppt_style_lock",
+                    "style_transform",
+                    "text_policy",
+                    "provenance",
+                    "verified"
+                  ],
+                  "properties": {
+                    "asset_id": {"type": "string", "minLength": 1},
+                    "slot_id": {"type": "string", "minLength": 1},
+                    "path_or_url": {"type": "string", "minLength": 1},
+                    "source_type": {
+                      "enum": [
+                        "authorized_source",
+                        "product_screenshot",
+                        "native_ppt",
+                        "generated_visual"
+                      ]
+                    },
+                    "ppt_style_lock": {"type": "string", "minLength": 1},
+                    "style_transform": {"const": "inherit_ppt_style"},
+                    "text_policy": {"const": "editable_ppt_text"},
+                    "provenance": {"type": "string", "minLength": 1},
+                    "verified": {"const": true}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

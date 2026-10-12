@@ -5,6 +5,7 @@
   "packs": [
     {
       "pack_id": "ref-01-premium-blue-tech-keynote",
+      "visual_family": "cool-dark-premium-keynote",
       "status": "ok",
       "created_at": "2026-07-09T06:30:01.554408+00:00",
       "source": "https://www.zcool.com.cn/work/ZNjg0Nzg1Mjg=.html",
@@ -79,6 +80,7 @@
     },
     {
       "pack_id": "ref-02-cinematic-automotive-report",
+      "visual_family": "light-cinematic-editorial-report",
       "status": "ok",
       "created_at": "2026-07-09T06:30:43.547020+00:00",
       "source": "https://www.zcool.com.cn/work/ZNzMyNzU2ODA=.html",
@@ -163,6 +165,7 @@
     },
     {
       "pack_id": "ref-03-neon-smart-home-launch-limited",
+      "visual_family": "neon-dark-launch",
       "status": "limited",
       "created_at": "2026-07-09T06:31:00.055066+00:00",
       "source": "https://www.zcool.com.cn/work/ZNjgxMTI2MTI=.html",
@@ -187,6 +190,7 @@
     },
     {
       "pack_id": "ref-04-dark-sci-fi-ring-tutorial",
+      "visual_family": "cool-dark-sci-fi-tutorial",
       "status": "ok",
       "created_at": "2026-07-09T06:31:28.220810+00:00",
       "source": "https://www.zcool.com.cn/work/ZNjUxNzEyODQ=.html",
@@ -271,6 +275,7 @@
     },
     {
       "pack_id": "ref-05-blue-black-auto-keynote",
+      "visual_family": "cool-scenic-keynote",
       "status": "ok",
       "created_at": "2026-07-09T06:32:03.452089+00:00",
       "source": "https://www.zcool.com.cn/work/ZNjkwMzExMjQ=.html",
@@ -355,6 +360,7 @@
     },
     {
       "pack_id": "ref-07-black-red-hardware-cgi-limited",
+      "visual_family": "red-dark-hardware-kv",
       "status": "limited",
       "created_at": "2026-07-09T06:32:31.910190+00:00",
       "source": "https://www.zcool.com.cn/work/ZNzI3NDM0OTI=.html",
@@ -439,6 +445,7 @@
     },
     {
       "pack_id": "ref-16-black-ai-collaboration-editorial",
+      "visual_family": "multicolor-dark-editorial-geometry",
       "status": "ok",
       "created_at": "2026-07-09T05:22:41.152767+00:00",
       "source": "/Users/guozhi/Desktop/AI技术项目/小红书内容/小红书视频/AI做ppt/未命名文件夹",
@@ -507,6 +514,7 @@
     },
     {
       "pack_id": "ref-18-soft-editorial-muse-template",
+      "visual_family": "soft-neutral-editorial-collage",
       "status": "ok",
       "created_at": "2026-07-09T05:22:49.196977+00:00",
       "source": "/Users/guozhi/Desktop/AI技术项目/小红书内容/小红书视频/AI做ppt/www-behance-net-gallery-134851785-muse-presentation-template-tracking_source-search_projects-ppt-l-43.pdf",
@@ -566,6 +574,7 @@
     },
     {
       "pack_id": "ref-19-red-glass-dark-pitch",
+      "visual_family": "red-dark-cinematic-pitch",
       "status": "ok",
       "created_at": "2026-07-09T05:22:57.039347+00:00",
       "source": "/Users/guozhi/Desktop/AI技术项目/小红书内容/小红书视频/AI做ppt/www-behance-net-gallery-236313611-presentation-pitch-deck-prezentacija.pdf",
@@ -634,6 +643,7 @@
     },
     {
       "pack_id": "ref-20-black-blue-saas-proposal",
+      "visual_family": "cool-dark-saas-data",
       "status": "ok",
       "created_at": "2026-07-09T05:22:50.693014+00:00",
       "source": "/Users/guozhi/Desktop/AI技术项目/小红书内容/小红书视频/AI做ppt/www-behance-net-gallery-249352711-presentation-design-for-a-business-proposal-tracking_source-search_projects-ppt-l-5.pdf",
@@ -684,6 +694,7 @@
     },
     {
       "pack_id": "ref-23-black-orange-auto-marketing-strategy",
+      "visual_family": "warm-dark-modular-report",
       "status": "ok",
       "created_at": "2026-07-09T14:57:37.781838+00:00",
       "source": "/Users/guozhi/Downloads/www-001ppt-com-ai-read-2056612897789104130.pdf",

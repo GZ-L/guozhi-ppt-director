@@ -1,0 +1,13 @@
+{
+  "protocol_version": "1.1",
+  "request_id": "",
+  "run_id": "",
+  "capability_id": "",
+  "role": "source_adapter",
+  "status": "requested",
+  "producer": "",
+  "input": {"sources": []},
+  "output": {},
+  "version": null,
+  "error": null
+}

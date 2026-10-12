@@ -18,7 +18,7 @@
 
 ```json
 {
-  "protocol_version": "1.0",
+  "protocol_version": "1.1",
   "request_id": "req-khazix-pdf",
   "run_id": "run-khazix-pdf-01",
   "operation": "deck.create",
@@ -35,6 +35,7 @@
     "rewrite_boundary": "rebuild"
   },
   "artifacts": [],
+  "verification": [],
   "warnings": [],
   "error": null,
   "next_action": "由父 Agent 或用户确认推荐的风格 ID 与改写边界"
@@ -97,3 +98,105 @@ cover -> section -> body -> process -> compare -> data -> closing
 ```
 
 Skill 必须向父 Agent 返回 `needs_input`，而不是直接向最终用户发问，也不能自行选一个风格后开始渲染。父 Agent 可以把推荐呈现给用户，或者在获得 `allow_defaults` 授权后恢复同一个运行。
+
+## 案例五：可编辑 PPTX 与网页动效同时交付
+
+用户确认保留可编辑 PPTX，并增加同内容的点击式网页动效。协议 `1.1` 使用路线 `dual` 和 profile `dual_motion_v1`，只维护一份故事、术语和语义揭示顺序，但分别记录两个制品的验证证据：
+
+```json
+{
+  "protocol_version": "1.1",
+  "request_id": "req-dual-motion-001",
+  "operation": "deck.revise",
+  "interaction_mode": "agent",
+  "source": [{"type": "run", "location": "run-static-001", "role": "primary"}],
+  "constraints": {
+    "deliverable": "dual",
+    "route_id": "dual",
+    "revision_scope": "增加与现有内容一致的动效版本",
+    "motion": {
+      "requested": true,
+      "profile_id": "dual_motion_v1",
+      "playback_targets": ["browser", "powerpoint_365_macos"],
+      "verification_required": "playback",
+      "advance": "manual",
+      "reduced_motion_fallback": true
+    },
+    "video": {"requested": false}
+  },
+  "confirmation": {"status": "confirmed", "exact_text": "确认动效版"}
+}
+```
+
+HTML 的浏览器播放证据不能替代 PPTX 结构证据；任一制品失败时，结果必须指出具体制品和验证等级。
+
+## 案例六：要求 PowerPoint 实播但本机没有 PowerPoint
+
+用户要求 `pptx_basic_v1`，并明确 `verification_required: playback`、目标为 `powerpoint_365_macos`。`scripts/check_motion_capabilities.py` 检测到本机只有 Keynote，没有 Microsoft PowerPoint。
+
+正确结果是：
+
+```json
+{
+  "protocol_version": "1.1",
+  "request_id": "req-pptx-playback-001",
+  "run_id": "run-pptx-playback-001",
+  "operation": "deck.create",
+  "status": "blocked",
+  "resolved_decisions": {
+    "route_id": "native_pptx",
+    "motion": {
+      "requested": true,
+      "profile_id": "pptx_basic_v1",
+      "playback_targets": ["powerpoint_365_macos"],
+      "verification_required": "playback"
+    }
+  },
+  "unresolved_fields": [],
+  "proposed_decisions": {},
+  "artifacts": [],
+  "verification": [],
+  "warnings": [],
+  "error": {
+    "code": "MOTION_TARGET_UNAVAILABLE",
+    "stage": "capability_check",
+    "message": "Microsoft PowerPoint 365 for macOS is unavailable.",
+    "evidence": "scripts/check_motion_capabilities.py report"
+  },
+  "next_action": "在安装 PowerPoint 365 的环境恢复同一 run，或重新确认 structural 验证等级"
+}
+```
+
+Skill 不得用 Keynote 打开成功、OOXML 结构通过或 HTML 动效正常来冒充 PowerPoint 实播验证。
+
+## 案例七：父 Agent 把渲染环节交给另一个 Skill
+
+父 Agent 已经让导演 Skill 完成确认、故事和版式合同。渲染 Skill 只接收已冻结的导演上下文，不重新判断页数、风格或路线：
+
+```json
+{
+  "protocol_version": "1.1",
+  "request_id": "req-agent-render-001",
+  "run_id": "run-agent-render-001",
+  "capability_id": "render-native-pptx-001",
+  "role": "renderer",
+  "status": "requested",
+  "producer": "presentations",
+  "input": {
+    "director_package": "outputs/ai-agent/run-agent-render-001/director-package",
+    "output_path": "outputs/ai-agent/run-agent-render-001/artifacts/deck.pptx"
+  },
+  "output": {},
+  "version": null,
+  "director_context": {
+    "route_id": "native_pptx",
+    "page_count": 6,
+    "style_lock": "ref-16-black-ai-collaboration-editorial",
+    "story_digest": "六页说明 AI Agent 从单点工具到协作工作流的演进",
+    "layout_contract_path": "outputs/ai-agent/run-agent-render-001/director-package/outline.md"
+  },
+  "error": null
+}
+```
+
+调用前后都用 `scripts/validate_runtime_payload.py --kind handoff` 校验，并把请求与完成记录追加到 manifest 的 `capabilities`。渲染 Skill 若无法满足 `native_pptx` 或可编辑性要求，必须返回 `blocked` 或 `failed`，不能自行改用网页路线。

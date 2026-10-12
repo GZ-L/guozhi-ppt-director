@@ -1,10 +1,11 @@
 {
-  "protocol_version": "1.0",
+  "protocol_version": "1.1",
   "request_id": "",
   "run_id": "",
   "operation": "deck.create",
   "interaction_mode": "human",
   "status": "received",
+  "state_history": ["received"],
   "source": [],
   "resolved_decisions": {
     "language": null,
@@ -13,17 +14,37 @@
     "deliverable": null,
     "route_id": null,
     "style_id": null,
+    "theme_id": null,
     "rewrite_boundary": null,
     "speaker_notes": null,
     "citations": null,
     "allow_limited_style": false,
-    "mutation_approved": false
+    "mutation_approved": false,
+    "motion": {
+      "requested": false,
+      "profile_id": "none",
+      "playback_targets": [],
+      "verification_required": "structural",
+      "advance": "manual",
+      "reduced_motion_fallback": true
+    },
+    "video": {
+      "requested": false,
+      "delivery": null,
+      "playback": "poster_only",
+      "audio": "muted",
+      "loop": false,
+      "poster_frame": null,
+      "fallback": "poster",
+      "assets": []
+    }
   },
   "unresolved_fields": [],
   "proposed_decisions": {},
   "capabilities": [],
   "artifacts": [],
   "warnings": [],
+  "verification": [],
   "error": null,
   "next_action": null,
   "confirmation": {

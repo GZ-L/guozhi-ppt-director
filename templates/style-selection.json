@@ -1,0 +1,66 @@
+{
+  "protocol_version": "1.1",
+  "selection_method": "deterministic_fit_diversity_v1",
+  "recommended_style_id": "ref-23-black-orange-auto-marketing-strategy",
+  "recent_style_ids": ["ref-16-black-ai-collaboration-editorial"],
+  "rejected_style_ids": [],
+  "candidates": [
+    {
+      "rank": 1,
+      "style_id": "ref-23-black-orange-auto-marketing-strategy",
+      "style_name": "Black Orange Strategy Report",
+      "style_category": "premium strategy report",
+      "visual_family": "warm-dark-modular-report",
+      "fit_score": 14,
+      "repeat_penalty": 0,
+      "effective_score": 14,
+      "fit_evidence": "Complete process, compare, data, and body roles for a methodology deck.",
+      "visual_traits": [
+        "charcoal canvas",
+        "warm orange accents",
+        "modular information cards"
+      ],
+      "preview_asset": "assets/style-library/style-packs/ref-23-black-orange-auto-marketing-strategy/contact-sheet.png",
+      "preview_available": true,
+      "recommended": true
+    },
+    {
+      "rank": 2,
+      "style_id": "ref-18-soft-editorial-muse-template",
+      "style_name": "Soft Editorial Muse Template",
+      "style_category": "soft editorial",
+      "visual_family": "soft-neutral-editorial-collage",
+      "fit_score": 13,
+      "repeat_penalty": 0,
+      "effective_score": 13,
+      "fit_evidence": "A visibly lighter editorial alternative with usable body and data roles.",
+      "visual_traits": [
+        "soft neutral palette",
+        "airy editorial spacing",
+        "delicate serif accents"
+      ],
+      "preview_asset": "assets/style-library/style-packs/ref-18-soft-editorial-muse-template/contact-sheet.png",
+      "preview_available": true,
+      "recommended": false
+    },
+    {
+      "rank": 3,
+      "style_id": "ref-20-black-blue-saas-proposal",
+      "style_name": "Black Blue SaaS Proposal",
+      "style_category": "dense SaaS proposal",
+      "visual_family": "cool-dark-saas-data",
+      "fit_score": 13,
+      "repeat_penalty": 0,
+      "effective_score": 13,
+      "fit_evidence": "A cool dark data-led alternative for workflow and product-system explanation.",
+      "visual_traits": [
+        "black-blue gradient",
+        "compact data cards",
+        "technical micro-labels"
+      ],
+      "preview_asset": "assets/style-library/style-packs/ref-20-black-blue-saas-proposal/contact-sheet.png",
+      "preview_available": true,
+      "recommended": false
+    }
+  ]
+}

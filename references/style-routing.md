@@ -22,11 +22,12 @@ Record explicit or proposed values for:
 3. Inspect candidate pack contact sheets and page-role assets.
 4. Exclude ineligible references.
 5. Score every remaining candidate with recorded evidence.
-6. Recommend the single highest result and report its exact style ID, score, fit reason, role coverage, and primary risk.
-7. In human mode, ask the user to confirm that recommendation; show alternatives only after rejection or a comparison request.
-8. In Agent mode, return the recommendation under `proposed_decisions` until confirmed.
-9. Lock the confirmed reference in the run manifest and `style-match.md`.
-10. Convert its page-role grammar into layout contracts.
+6. Apply the deterministic repeat penalty and visual-family diversity rules from the match rules.
+7. Build and validate exactly three candidates: one recommended candidate and two visual alternatives with different indexed visual families and readable previews.
+8. In human mode, show all three previews together and identify `recommended_style_id`.
+9. In Agent mode, return the validated `style_candidates` object under `proposed_decisions` until confirmed.
+10. Lock the confirmed reference in the run manifest and `style-match.md`.
+11. Convert its page-role grammar into layout contracts.
 
 ## DashiAI Style Workflow
 

@@ -1,0 +1,77 @@
+{
+  "protocol_version": "1.1",
+  "operations": [
+    {
+      "id": "deck.create",
+      "positive_examples": ["把这篇文章做成一份 PPT", "Create a new deck from this PDF"],
+      "negative_hint": "An existing deck plus requested changes is deck.revise"
+    },
+    {
+      "id": "deck.revise",
+      "positive_examples": ["把刚才那份 PPT 改成 6 页", "Add motion to this existing deck"],
+      "negative_hint": "A review with no artifact mutation is deck.review"
+    },
+    {
+      "id": "deck.review",
+      "positive_examples": ["检查这份 PPT 的逻辑和视觉问题", "Review this deck without changing it"],
+      "negative_hint": "Requested file changes are deck.revise"
+    },
+    {
+      "id": "style.list",
+      "positive_examples": ["列出现在的风格库", "Show available presentation styles"],
+      "negative_hint": "Adding a new reference is style.add"
+    },
+    {
+      "id": "style.add",
+      "positive_examples": ["把这个 PDF 明确添加到风格库", "Add this reference as a new style pack"],
+      "negative_hint": "Using a reference for one deck does not mutate the style library"
+    },
+    {
+      "id": "style.update",
+      "positive_examples": ["更新 ref-16 的参考截图", "Refresh the assets for this existing style ID"],
+      "negative_hint": "A new visual source with new meaning is style.add"
+    },
+    {
+      "id": "style.remove",
+      "positive_examples": ["从风格库删除 ref-12", "Remove this exact style ID"],
+      "negative_hint": "Do not classify removal without an exact existing style ID"
+    },
+    {
+      "id": "help",
+      "positive_examples": ["这个 Skill 怎么使用", "Explain what guozhi-ppt-director can do"],
+      "negative_hint": "A request to create or mutate a deck uses a deck operation"
+    }
+  ],
+  "precedence": [
+    "Explicit structured operation in the current invocation",
+    "Explicit style-library mutation language",
+    "Existing deck or run plus requested changes",
+    "New presentation artifact request",
+    "Review-only request",
+    "Help request"
+  ],
+  "ambiguous_examples": [
+    {
+      "text": "这个也添加进去",
+      "possible_operations": ["style.add", "deck.revise"],
+      "expected_status": "needs_input",
+      "question": "要添加到风格库，还是添加到当前 PPT？"
+    },
+    {
+      "text": "换成这个",
+      "possible_operations": ["deck.revise", "style.update"],
+      "expected_status": "needs_input",
+      "question": "只修改当前 PPT，还是更新这个风格 ID 的资产？"
+    },
+    {
+      "text": "帮我看一下这个",
+      "possible_operations": ["deck.review", "help"],
+      "expected_status": "needs_input",
+      "question": "要审查这份演示，还是只了解 Skill 的使用方法？"
+    }
+  ],
+  "non_trigger_examples": [
+    "只总结这篇文章，不需要演示文稿",
+    "把这句话翻译成英文"
+  ]
+}

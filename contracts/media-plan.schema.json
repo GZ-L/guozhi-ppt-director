@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "guozhi-ppt-director/media-plan.schema.json",
+  "title": "Guozhi PPT Director Media Plan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocol_version",
+    "request_id",
+    "run_id",
+    "style_lock",
+    "style_authority",
+    "source_precedence",
+    "text_policy",
+    "media_treatment_authority",
+    "media_treatment_references",
+    "fallback_image_form_policy",
+    "slots"
+  ],
+  "properties": {
+    "protocol_version": {"const": "1.1"},
+    "request_id": {"type": "string", "minLength": 1},
+    "run_id": {"type": "string", "minLength": 1},
+    "style_lock": {"type": "string", "minLength": 1},
+    "style_authority": {"const": "ppt_style_lock"},
+    "source_precedence": {"const": "authorized_source_first"},
+    "text_policy": {"const": "editable_ppt_text"},
+    "media_treatment_authority": {"const": "style_pack_assets"},
+    "media_treatment_references": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "fallback_image_form_policy": {"const": "visual_intent_only"},
+    "slots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "slot_id",
+          "slide",
+          "visual_need",
+          "reader_block",
+          "visual_job",
+          "anchor_type",
+          "hero_thesis",
+          "must_show",
+          "asset_priority",
+          "image_form",
+          "aspect_ratio",
+          "character_mode",
+          "character_id",
+          "ppt_style_lock",
+          "style_transform",
+          "text_policy",
+          "motion_intent",
+          "confirmation_required"
+        ],
+        "properties": {
+          "slot_id": {"type": "string", "minLength": 1},
+          "slide": {"type": "integer", "minimum": 1},
+          "visual_need": {"type": "boolean"},
+          "reader_block": {"type": "string"},
+          "visual_job": {"type": "string"},
+          "anchor_type": {
+            "enum": [
+              "emotion",
+              "explanatory",
+              "comic",
+              "overview",
+              "source_image",
+              "product_screenshot",
+              "none"
+            ]
+          },
+          "hero_thesis": {"type": "string"},
+          "must_show": {
+            "type": "array",
+            "items": {"type": "string", "minLength": 1}
+          },
+          "asset_priority": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "authorized_source",
+                "product_screenshot",
+                "native_ppt",
+                "generated_visual"
+              ]
+            }
+          },
+          "image_form": {
+            "enum": [
+              "physical_metaphor",
+              "process",
+              "comparison",
+              "relationship",
+              "timeline",
+              "comic",
+              "overview",
+              "evidence",
+              "none"
+            ]
+          },
+          "aspect_ratio": {
+            "enum": ["16:9", "4:3", "1:1", "3:4", "custom_slot"]
+          },
+          "character_mode": {"enum": ["none", "optional_ip", "custom"]},
+          "character_id": {"type": ["string", "null"]},
+          "ppt_style_lock": {"type": "string", "minLength": 1},
+          "style_transform": {"const": "inherit_ppt_style"},
+          "text_policy": {"const": "editable_ppt_text"},
+          "motion_intent": {"type": "string"},
+          "confirmation_required": {"type": "boolean"}
+        }
+      }
+    }
+  }
+}

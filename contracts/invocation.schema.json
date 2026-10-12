@@ -6,7 +6,7 @@
   "additionalProperties": false,
   "required": ["protocol_version", "request_id", "operation", "interaction_mode"],
   "properties": {
-    "protocol_version": {"const": "1.0"},
+    "protocol_version": {"enum": ["1.0", "1.1"]},
     "request_id": {"type": "string", "minLength": 1},
     "run_id": {"type": ["string", "null"]},
     "operation": {
@@ -45,12 +45,98 @@
         "deliverable": {"enum": ["pptx", "html", "pdf", "dual", "review"]},
         "route_id": {"enum": ["native_pptx", "web_deck", "dual", "dashiai", "review_only"]},
         "style_id": {"type": ["string", "null"]},
+        "theme_id": {"type": ["string", "null"]},
         "rewrite_boundary": {"enum": ["rebuild", "preserve_order", "preserve_wording"]},
         "speaker_notes": {"type": "boolean"},
         "citations": {"type": "boolean"},
         "allow_limited_style": {"type": "boolean"},
         "mutation_approved": {"type": "boolean"},
-        "revision_scope": {"type": ["string", "null"]}
+        "revision_scope": {"type": ["string", "null"]},
+        "motion": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["requested"],
+          "properties": {
+            "requested": {"type": "boolean"},
+            "profile_id": {
+              "enum": ["none", "web_motion_v1", "pptx_basic_v1", "dual_motion_v1"]
+            },
+            "playback_targets": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "enum": ["browser", "powerpoint_365_windows", "powerpoint_365_macos"]
+              }
+            },
+            "verification_required": {"enum": ["structural", "playback"]},
+            "advance": {"enum": ["manual", "timed", "mixed"]},
+            "reduced_motion_fallback": {"type": "boolean"}
+          },
+          "allOf": [
+            {
+              "if": {"properties": {"requested": {"const": true}}},
+              "then": {
+                "required": [
+                  "profile_id",
+                  "playback_targets",
+                  "verification_required",
+                  "advance",
+                  "reduced_motion_fallback"
+                ]
+              }
+            }
+          ]
+        },
+        "video": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["requested"],
+          "properties": {
+            "requested": {"type": "boolean"},
+            "delivery": {"enum": ["embedded", "linked", "web", "rendered_video"]},
+            "playback": {"enum": ["on_click", "automatic", "poster_only"]},
+            "audio": {"enum": ["muted", "enabled"]},
+            "loop": {"type": "boolean"},
+            "poster_frame": {"type": ["string", "null"]},
+            "fallback": {"enum": ["poster", "link", "blocked"]},
+            "assets": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["asset_id", "source", "page_id"],
+                "properties": {
+                  "asset_id": {"type": "string", "minLength": 1},
+                  "source": {"type": "string", "minLength": 1},
+                  "page_id": {"type": ["integer", "string"], "minLength": 1},
+                  "mime_type": {"type": ["string", "null"]},
+                  "duration_seconds": {"type": ["number", "null"], "exclusiveMinimum": 0},
+                  "trim_start_seconds": {"type": "number", "minimum": 0},
+                  "trim_end_seconds": {"type": ["number", "null"], "exclusiveMinimum": 0},
+                  "checksum_sha256": {"type": ["string", "null"]}
+                }
+              }
+            }
+          },
+          "allOf": [
+            {
+              "if": {"properties": {"requested": {"const": true}}},
+              "then": {
+                "required": [
+                  "delivery",
+                  "playback",
+                  "audio",
+                  "loop",
+                  "poster_frame",
+                  "fallback",
+                  "assets"
+                ]
+              }
+            }
+          ]
+        }
       }
     },
     "confirmation": {

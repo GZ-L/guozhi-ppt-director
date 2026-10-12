@@ -14,16 +14,18 @@
 - DashiAI media intent:
 - Fidelity target: near-1:1 style replica
 - Recommended style option:
+- `recommended_style_id`:
+- `style_candidates`: three eligible style candidates; one recommended candidate and two visual alternatives; deterministic and never random.
 - User-confirmed style option:
 - Page roles needed:
 
 ## Candidate Scores
 
-| Ref ID / Pack ID | Style Name | Recommended | Topic Fit | Audience Fit | Mood Fit | Density Fit | Deliverable Fit | Role Coverage Fit | Fidelity Fit | Total | Notes |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  |  | yes/no |  |  |  |  |  |  |  |  |  |
-|  |  | yes/no |  |  |  |  |  |  |  |  |  |
-|  |  | yes/no |  |  |  |  |  |  |  |  |  |
+| Rank | Ref ID / Pack ID | Style Name | Visual Family | Recommended | Fit Score | Repeat Penalty | Effective Score | Preview Asset | Notes |
+| ---: | --- | --- | --- | --- | ---: | ---: | ---: | --- | --- |
+| 1 |  |  |  | yes |  |  |  |  |  |
+| 2 |  |  |  | no |  |  |  |  |  |
+| 3 |  |  |  | no |  |  |  |  |  |
 
 ## DashiAI Theme Candidates, If Route Is `dashiai`
 

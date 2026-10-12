@@ -1,0 +1,28 @@
+{
+  "protocol_version": "1.1",
+  "request_id": "request-123",
+  "run_id": "run-123",
+  "capability_id": "media-generator-01",
+  "role": "media_generator",
+  "status": "requested",
+  "producer": "discovered-media-provider",
+  "input": {
+    "media_slots": [
+      {"slot_id": "media-slide-03"}
+    ],
+    "generation_scope": "production_assets"
+  },
+  "output": {},
+  "version": null,
+  "director_context": {
+    "route_id": "native_pptx",
+    "page_count": 6,
+    "style_lock": "ref-16-black-ai-collaboration-editorial",
+    "story_digest": "sha256:replace-with-story-digest",
+    "layout_contract_path": "director-package/layout-contracts.json",
+    "media_plan_path": "director-package/media-plan.json",
+    "media_plan_digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+    "confirmation_status": "confirmed"
+  },
+  "error": null
+}
